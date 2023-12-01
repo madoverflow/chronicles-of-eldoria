@@ -3,6 +3,7 @@ package view.buttons;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
 public class ConcreteButtonBuilder implements ButtonBuilder{
@@ -56,4 +57,8 @@ public class ConcreteButtonBuilder implements ButtonBuilder{
     public void buildListener(MouseAdapter mouseAdapter) {
         this.button.addMouseListener(mouseAdapter);
     }
+    public void buildListener(ActionListener actionListener) {
+        this.button.addActionListener(actionListener);
+    }
+
 }
