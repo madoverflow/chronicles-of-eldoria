@@ -8,8 +8,11 @@ import java.awt.event.MouseAdapter;
 public interface ButtonBuilder {
     JButton build();
     void buildDimension(int x, int y, int width, int height);
-    void buildName(String name);
-    void buildColor(Color color);
+    void buildText(String name);
+    void buildBackgroundColor(Color color);
+    void buildForegroundColor(Color color);
+    void builFont(Font font);
+    void buildOpaque(boolean flag);
     void buildBorder(Border border);
     void buildListener(MouseAdapter mouseAdapter);
 

@@ -23,13 +23,28 @@ public class ConcreteButtonBuilder implements ButtonBuilder{
     }
 
     @Override
-    public void buildName(String name) {
-        this.button.setName(name);
+    public void buildText(String name) {
+        this.button.setText(name);
     }
 
     @Override
-    public void buildColor(Color color) {
+    public void buildBackgroundColor(Color color) {
         this.button.setBackground(color);
+    }
+
+    @Override
+    public void buildForegroundColor(Color color) {
+        this.button.setForeground(color);
+    }
+
+    @Override
+    public void builFont(Font font) {
+        this.button.setFont(font);
+    }
+
+    @Override
+    public void buildOpaque(boolean flag) {
+        this.button.setOpaque(flag);
     }
 
     @Override
