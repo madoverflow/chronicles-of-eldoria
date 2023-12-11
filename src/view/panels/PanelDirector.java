@@ -13,7 +13,7 @@ public class PanelDirector {
         this.panelBuilder = panelBuilder;
     }
 
-    /*make di ciascun pannello per ogni stato. Dentro, l a creazione di tutti i componenti del pannello.
+    /*make di ciascun pannello per ogni stato. Dentro, la creazione di tutti i componenti del pannello.
     Utilizzare il concrete builder giusto.
     * */
     public JPanel makeInventoryPanel(){
