@@ -18,7 +18,7 @@ public class ConcreteCreatorNoFinalState implements CreatorState{
         state.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         state.setLocationRelativeTo(null);
         state.setResizable(false);
-        state.setVisible(true);
+        state.setVisible(false);
         container.add(labelBackgroundImage);
         container.add(panel);
         return state;
