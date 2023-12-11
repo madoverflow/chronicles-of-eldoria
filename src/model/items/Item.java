@@ -3,12 +3,14 @@ package model.items;
 import javax.swing.*;
 
 public class Item {
-    private final String name;
-    private final ImageIcon icon;
+    private String name;
+    private ImageIcon icon;
 
-    public Item(String name, ImageIcon icon){
+    public void setName(String name) {
         this.name = name;
-        this.icon = icon;
+    }
+    public void setImageIcon(String path){
+        this.icon = new ImageIcon(path);
     }
     
     public String getName() {

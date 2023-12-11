@@ -4,6 +4,7 @@ import model.items.Item;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.nio.file.FileSystems;
 
 public class InventoryFrame extends JFrame {
     private Inventory i = Inventory.getInventory();
@@ -14,7 +15,7 @@ public class InventoryFrame extends JFrame {
     private final JLabel labelStoneIcon = new JLabel();
     private final JLabel labelBoardIcon = new JLabel();
     private final JLabel labelLightIcon = new JLabel();
-    private final ImageIcon frameIcon = new ImageIcon("images/chest.png");
+    private final ImageIcon frameIcon = new ImageIcon(FileSystems.getDefault().getPath("src/model/assets/chest.png").toString());
 
     private InventoryFrame() {
         this.setIconImage(frameIcon.getImage());

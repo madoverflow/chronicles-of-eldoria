@@ -1,18 +1,26 @@
 package model.items;
 
+import java.nio.file.FileSystems;
+
 public class ItemDirector {
-    public void constructStone(Builder builder) {
-        builder.setName("Stone");
-        builder.setImageIcon("images/stone.png");
+    private ItemBuilder itemBuilder;
+    public ItemDirector(ItemBuilder itemBuilder){this.itemBuilder = itemBuilder;}
+    public void changeBuilder(ItemBuilder itemBuilder){this.itemBuilder = itemBuilder;}
+    public Item constructStone() {
+        itemBuilder.buildName("Stone");
+        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/stone.png").toString());
+        return itemBuilder.build();
     }
 
-    public void constructBoard(Builder builder) {
-        builder.setName("Board");
-        builder.setImageIcon("images/wood.png");
+    public Item constructBoard() {
+        itemBuilder.buildName("Board");
+        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/board.png").toString());
+        return itemBuilder.build();
     }
 
-    public void constructLight(Builder builder) {
-        builder.setName("Light");
-        builder.setImageIcon("images/torch.png");
+    public Item constructLight() {
+        itemBuilder.buildName("Light");
+        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/light.png").toString());
+        return itemBuilder.build();
     }
 }
