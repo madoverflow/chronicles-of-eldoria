@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chronacles of eldoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chronacles of eldoria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -18,8 +19,15 @@
       <change beforePath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/inventory/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ItemDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemDirector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/InventoryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InventoryFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteInventoryPanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteInventoryPanelBuilder.java" afterDir="false" />
@@ -58,14 +66,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="view" />
