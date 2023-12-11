@@ -5,39 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01629c66-467a-42a6-b72b-985e6a72f990" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/assets/contadino.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/assets/sfondo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chronacles of eldoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chronacles of eldoria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chest.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/assets/chest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/eldoria.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/assets/eldoria.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/stone.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/assets/stone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/torch.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/assets/torch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wood.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/assets/wood.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/inventory/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/items/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/items/ItemDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemDirector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Npc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/InventoryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InventoryFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MenuFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteInventoryPanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteInventoryPanelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteCreatorFinalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteCreatorFinalState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteCreatorNoFinalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteCreatorNoFinalState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/CreatorState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/CreatorState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/States.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +55,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\emanu\IdeaProjects\chronicles-of-eldoria\src\model\assets" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="view" />
     </key>
@@ -106,5 +89,16 @@
       <updated>1701367942005</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

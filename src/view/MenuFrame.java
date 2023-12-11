@@ -6,25 +6,21 @@ import controller.ButtonWindowAdapter;
 import view.buttons.ConcreteButtonBuilder;
 import javax.swing.*;
 import java.awt.*;
-import java.util.Objects;
+import java.nio.file.FileSystems;
 
 
 public class MenuFrame extends JFrame {
-    Container c;
-    JPanel titleNamePanel, startButtonPanel;
-    JLabel titleNameLabel;
-    ButtonWindowAdapter adapter;
+    private final JPanel titleNamePanel;
+    private final JPanel startButtonPanel;
+    private final JLabel titleNameLabel;
     private static MenuFrame menuFrame;
-
-
-
-    Font titleFont = new Font("Times New Roman", Font.PLAIN, 48);
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
+    private final Font titleFont = new Font("Times New Roman", Font.PLAIN, 48);
+    private final Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
 
     private MenuFrame() {
         super("Game Menu");
-        c = this.getContentPane();
-        c.setBackground(Color.BLACK);
+        Container contentPanel = this.getContentPane();
+        contentPanel.setBackground(Color.BLACK);
         this.setLayout(null);
 
 
@@ -33,7 +29,6 @@ public class MenuFrame extends JFrame {
         titleNamePanel.setBackground(Color.BLACK);
         titleNameLabel = new JLabel("CHRONICLES OF ELDORIA");
         titleNameLabel.setForeground(Color.BLACK);
-       // titleNameLabel.setBorder(BorderFactory.createLineBorder(Color.MAGENTA));
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);
         titleNamePanel.setOpaque(false);
@@ -45,27 +40,23 @@ public class MenuFrame extends JFrame {
         buttonBuilder.buildText("START");
         buttonBuilder.buildForegroundColor(Color.BLACK);
         buttonBuilder.builFont(normalFont);
-        //buttonBuilder.buildBackgroundColor(Color.BLACK);
+
         buttonBuilder.buildOpaque(false);
-        //adapter = new ButtonWindowAdapter(); // Inizializza ButtonWindowAdapter con il frame corrente
-        // buttonBuilder.buildListener(adapter); // Aggiungi il listener al pulsante
-
-        //buttonBuilder.buildListener(e -> {
-        //    GameFrame gameFrame= GameFrame.getGameFrame();
-        //    MenuFrame.this.dispose();
-        //});
-
         startButtonPanel.add(buttonBuilder.build());
         startButtonPanel.setOpaque(false);
 
-        c.add(titleNamePanel);
-        c.add(startButtonPanel);
+        contentPanel.add(titleNamePanel);
+        contentPanel.add(startButtonPanel);
 
-        //imposta un immagine di sfondo
-        ImageIcon backgroundImage = new ImageIcon("images/eldoria.jpg");
+        ImageIcon backgroundImage = new ImageIcon(
+                FileSystems
+                        .getDefault()
+                        .getPath("src/model/assets/eldoria.jpg")
+                        .toString()
+        );
         JLabel labelBackgroundImage = new JLabel(backgroundImage);
         labelBackgroundImage.setBounds(0,0,800,614);
-        c.add(labelBackgroundImage);
+        contentPanel.add(labelBackgroundImage);
 
         this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -73,14 +64,13 @@ public class MenuFrame extends JFrame {
         this.setResizable(false);
         this.setVisible(true);
     }
-    //utilizzo il singleton
+
     public static MenuFrame getMenuFrame(){
         if (menuFrame==null) {
             menuFrame=new MenuFrame();
         }
         return menuFrame;
     }
-
 
 }
 

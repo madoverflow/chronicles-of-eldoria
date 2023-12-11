@@ -7,15 +7,21 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
 public class ConcreteButtonBuilder implements ButtonBuilder{
-    private final JButton button;
+    private JButton button;
 
     public ConcreteButtonBuilder(){
-        this.button = new JButton();
+        this.reset();
     }
 
     @Override
     public JButton build() {
         return this.button;
+    }
+
+    @Override
+    public void reset() {
+        this.button = new JButton();
+        this.button.setFocusPainted(false);
     }
 
     @Override
@@ -51,14 +57,6 @@ public class ConcreteButtonBuilder implements ButtonBuilder{
     @Override
     public void buildBorder(Border border) {
         this.button.setBorder(border);
-    }
-
-    @Override
-    public void buildListener(MouseAdapter mouseAdapter) {
-        this.button.addMouseListener(mouseAdapter);
-    }
-    public void buildListener(ActionListener actionListener) {
-        this.button.addActionListener(actionListener);
     }
 
 }
