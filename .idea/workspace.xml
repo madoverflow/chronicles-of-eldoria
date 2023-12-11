@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01629c66-467a-42a6-b72b-985e6a72f990" name="Changes" comment="" />
+    <list default="true" id="01629c66-467a-42a6-b72b-985e6a72f990" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chronacles of eldoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chronacles of eldoria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteInventoryPanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteInventoryPanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteCreatorFinalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteCreatorFinalState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteCreatorNoFinalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteCreatorNoFinalState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/CreatorState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/CreatorState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/States.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +44,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -26,12 +58,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="view" />

@@ -7,5 +7,5 @@ public class States {
     private static final CreatorState CREATOR_NO_FINAL_STATE = new ConcreteCreatorNoFinalState();
     //stessa cosa per il director e concretebuilder
 
-    //public static final JFrame S0 = States.CREATOR_NO_FINAL_STATE.createState(makePanelS0 del director);
+    //public static final JFrame S0 = States.CREATOR_NO_FINAL_STATE.createState(makePanelS0 del panel director);
 }
