@@ -14,6 +14,7 @@ public class MenuFrame extends JFrame {
     private final JPanel startButtonPanel;
     private final JLabel titleNameLabel;
     private static MenuFrame menuFrame;
+    private final ConcreteButtonBuilder buttonBuilder;
     private final Font titleFont = new Font("Times New Roman", Font.PLAIN, 48);
     private final Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
 
@@ -22,7 +23,6 @@ public class MenuFrame extends JFrame {
         Container contentPanel = this.getContentPane();
         contentPanel.setBackground(Color.BLACK);
         this.setLayout(null);
-
 
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(100, 100, 600, 150);
@@ -36,11 +36,10 @@ public class MenuFrame extends JFrame {
         startButtonPanel=new JPanel();
         startButtonPanel.setBounds(300,450,200,100);
         startButtonPanel.setBackground(Color.black);
-        ConcreteButtonBuilder buttonBuilder = new ConcreteButtonBuilder();
+        buttonBuilder = new ConcreteButtonBuilder();
         buttonBuilder.buildText("START");
         buttonBuilder.buildForegroundColor(Color.BLACK);
         buttonBuilder.builFont(normalFont);
-
         buttonBuilder.buildOpaque(false);
         startButtonPanel.add(buttonBuilder.build());
         startButtonPanel.setOpaque(false);
