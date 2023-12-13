@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01629c66-467a-42a6-b72b-985e6a72f990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/states/ConcreteFinalStateBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/states/ConcreteNonFinalStateBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/states/StateBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/states/StateDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/assets/cedric.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteCreatorFinalState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteCreatorNoFinalState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/CreatorState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/StateDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/StateDirector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/states/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/States.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }

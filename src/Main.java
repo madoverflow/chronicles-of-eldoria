@@ -5,6 +5,7 @@ import model.items.ItemBuilder;
 import model.items.ItemDirector;
 import view.InventoryFrame;
 import view.MenuFrame;
+import view.states.States;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,5 +21,7 @@ public class Main {
         i.putItem(stone);
 
         InventoryFrame.getInventoryFrame();
+
+        States.S1.setVisible(true);
     }
 }

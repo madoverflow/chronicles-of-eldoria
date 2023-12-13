@@ -16,5 +16,5 @@ public interface ButtonBuilder {
     void builFont(Font font);
     void buildOpaque(boolean flag);
     void buildBorder(Border border);
-
+    void buildListener(ActionListener actionListener);
 }

@@ -59,4 +59,8 @@ public class ConcreteButtonBuilder implements ButtonBuilder{
         this.button.setBorder(border);
     }
 
+    public void buildListener(ActionListener actionListener){
+        this.button.addActionListener(actionListener);
+    }
+
 }

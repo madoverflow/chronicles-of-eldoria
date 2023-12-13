@@ -15,7 +15,7 @@ public class ConcreteStatePanelBuilder implements PanelBuilder{
        this.panel = new JPanel();
        this.panel.setLayout(null);
        this.panel.setBounds(125,125,550,400);
-       this.panel.setOpaque(true);
+       this.panel.setOpaque(false);
     }
 
     @Override

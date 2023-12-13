@@ -9,7 +9,7 @@ public class Cedric extends Npc{
     
     public static Cedric getInstance(){
         if(cedric==null)
-            cedric = new Cedric("Cedric", "path");
+            cedric = new Cedric("Cedric", "src/model/assets/cedric.png");
         return cedric;
     }
 }
