@@ -58,6 +58,13 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS5());
         return this.stateBuilder.build();
     }
+    public JFrame makeState6() {
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS6());
+        return this.stateBuilder.build();
+
+    }
 
     public JFrame makeState7(){
         this.stateBuilder.reset();
