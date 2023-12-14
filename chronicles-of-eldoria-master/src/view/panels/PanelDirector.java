@@ -187,8 +187,8 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             eren.getItem(itemDirector.constructBoard());
-            States.S6.setVisible(true);
             States.S4.setVisible(false);
+            States.S6.setVisible(true);
         });
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
@@ -197,8 +197,8 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
-            States.S6.setVisible(true);
             States.S4.setVisible(false);
+            States.S6.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2);
@@ -212,9 +212,9 @@ public class PanelDirector {
     public JPanel makePanelS6() {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
-        this.scrollBuilder.buildDimension(87, 25, 375, 275);
-        this.scrollBuilder.buildText("Ti trovi davanti ad un fiume e devi attraversarlo per proseguire la tua avventura.");
-
+        this.scrollBuilder.buildDimension(87, 25, 375, 200);
+        this.scrollBuilder.buildText("Ti trovi davanti ad un fiume e devi attraversarlo per proseguire la tua " +
+                "avventura.");
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
         this.buttonBuilder.buildText("AVVENTURATI");
@@ -222,17 +222,17 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             if(eren.useItem(itemDirector.constructBoard())){
-                JOptionPane.showMessageDialog(null,"Posizionando la tavola di legno in verticale sopra il fiume, è di una dimensione"+
-                        " \nsufficiente per creare un piccolo ponte. \nComplimenti! Puoi attraversare il fiume");
+                JOptionPane.showMessageDialog(null,"Posizionando la tavola di legno in verticale " +
+                        "sopra il fiume, è di una dimensione sufficiente per creare un piccolo ponte. " +
+                        "\nComplimenti! Puoi attraversare il fiume");
                 States.S6.setVisible(false);
                 States.S7.setVisible(true);
             }
             else {
-                JOptionPane.showMessageDialog(null,"Quanto sarebbe bello se avessi una tavola di legno..");
+                JOptionPane.showMessageDialog(null,"Quanto sarebbe bello se avessi una tavola " +
+                        "di legno...");
             }
-
         });
-
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
@@ -242,15 +242,11 @@ public class PanelDirector {
         this.buttonBuilder.buildListener(event -> {
             States.S6.setVisible(false);
             States.S4.setVisible(true);
-
-
         });
         JButton button2 = this.buttonBuilder.build();
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2);
         return this.panelBuilder.build();
     }
-
-
 
     public JPanel makePanelS7(){
         this.panelBuilder.reset();

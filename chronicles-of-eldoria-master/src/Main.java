@@ -21,9 +21,10 @@ public class Main {
         i.putItem(stone);
         */
         //InventoryFrame.getInventoryFrame();
-        //FrameDiProva.initGUI();
+        FrameDiProva.initGUI();
 
-        States.S6.setVisible(true);
+        States.S4.setVisible(true);
+        //States.S6.setVisible(true);
 
     }
 }
