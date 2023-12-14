@@ -149,7 +149,7 @@ public class PanelDirector {
         this.buttonBuilder2.buildText("SINISTRA");
         this.buttonBuilder2.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder2.buildForegroundColor(Color.WHITE);
-        this.buttonBuilder1.buildListener(event -> {
+        this.buttonBuilder2.buildListener(event -> {
             States.S3.setVisible(false);
             States.S4.setVisible(true);
         });
