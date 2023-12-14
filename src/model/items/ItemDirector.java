@@ -14,7 +14,7 @@ public class ItemDirector {
 
     public Item constructBoard() {
         itemBuilder.buildName("Board");
-        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/board.png").toString());
+        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/wood.png").toString());
         return itemBuilder.build();
     }
 
