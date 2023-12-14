@@ -19,7 +19,7 @@ public class StateDirector {
 
     public JFrame makeState0(){
         this.stateBuilder.reset();
-        this.stateBuilder.buildBackground("img");
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
         //this.stateBuilder.buildPanel(this.panelDirector.makePanelS0); va tolto il commento alla riga quando si crea il makePanelS0 in PanelDirector
         return this.stateBuilder.build();
     }
@@ -35,6 +35,13 @@ public class StateDirector {
         this.stateBuilder.reset();
         this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS2());
+        return this.stateBuilder.build();
+    }
+
+    public JFrame makeState4(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS4());
         return this.stateBuilder.build();
     }
 
