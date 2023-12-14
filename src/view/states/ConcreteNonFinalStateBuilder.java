@@ -18,12 +18,14 @@ public class ConcreteNonFinalStateBuilder implements StateBuilder {
         Container contentPane = this.state.getContentPane();
         contentPane.add(this.panel);
         contentPane.add(this.labelBackgroundImage);
+        ImageIcon frameIcon = new ImageIcon(FileSystems.getDefault().getPath("src/model/assets/sun.png").toString());
+        this.state.setIconImage(frameIcon.getImage());
         return this.state;
     }
 
     @Override
     public void reset() {
-        this.state = new JFrame();
+        this.state = new JFrame("Chronicles of Eldoria");
         this.panel = new JPanel();
         this.labelBackgroundImage = new JLabel();
         state.setSize(new Dimension(800, 650));

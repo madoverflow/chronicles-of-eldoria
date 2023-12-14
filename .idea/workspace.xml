@@ -7,7 +7,6 @@
     <list default="true" id="01629c66-467a-42a6-b72b-985e6a72f990" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
@@ -26,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/items/ItemDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemDirector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Lythien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Lythien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Npc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/InventoryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InventoryFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MenuFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuFrame.java" afterDir="false" />
