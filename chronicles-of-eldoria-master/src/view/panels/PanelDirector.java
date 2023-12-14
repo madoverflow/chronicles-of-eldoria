@@ -21,24 +21,25 @@ public class PanelDirector {
     private final ButtonBuilder buttonBuilder = new ConcreteButtonBuilder();
     private final Player eren = Eren.getInstance(); //Riferimento al protagonista da usare per gli oggetti
     private final ItemDirector itemDirector = new ItemDirector(new ConcreteItemBuilder());
-    public PanelDirector(PanelBuilder panelBuilder){
+
+    public PanelDirector(PanelBuilder panelBuilder) {
         this.panelBuilder = panelBuilder;
     }
 
-    public void changeBuilder(PanelBuilder panelBuilder){
+    public void changeBuilder(PanelBuilder panelBuilder) {
         this.panelBuilder = panelBuilder;
     }
 
-    public JPanel makePanelS0(){
+    public JPanel makePanelS0() {
         this.panelBuilder.reset();
         //scroll
         this.scrollBuilder.reset();
-        this.scrollBuilder.buildDimension(25,25,275,275);
+        this.scrollBuilder.buildDimension(25, 25, 275, 275);
         this.scrollBuilder.buildText("Eren, sei un contadino della periferia di Eldoria. Come tutti i giorni, stai lavorando sui tuoi terreni quando ad un tratto qualcosa di metallico si scontra con la tua pala\n\n\n"
                 + "CLANG!\n\n\n"
                 + "E’ una pietra dalle sembianze simili alla Pietra dell’Aurora di cui narra la leggenda.\n\n\n"
                 + "LA VUOI RACCOGLIERE?"
-                );
+        );
         //labelimage
         ImageIcon backgroundImage = new ImageIcon(
                 FileSystems
@@ -47,12 +48,12 @@ public class PanelDirector {
                         .toString()
         );
         JLabel labelBackgroundImage = new JLabel(backgroundImage);
-        labelBackgroundImage.setBounds(350,25,175,275);
+        labelBackgroundImage.setBounds(350, 25, 175, 275);
         //bottone SI
         this.buttonBuilder.reset();
-        this.buttonBuilder.buildDimension(325,335,125,30);
+        this.buttonBuilder.buildDimension(325, 335, 125, 30);
         this.buttonBuilder.buildText("SI");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             States.S0.setVisible(false);
@@ -61,37 +62,39 @@ public class PanelDirector {
         JButton button1 = this.buttonBuilder.build();
         //bottone NO
         this.buttonBuilder.reset();
-        this.buttonBuilder.buildDimension(100,335,125,30);
+        this.buttonBuilder.buildDimension(100, 335, 125, 30);
         this.buttonBuilder.buildText("NO");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,button1,button2);
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2);
         return this.panelBuilder.build();
     }
-    public JPanel makePanelS1(){
+
+    public JPanel makePanelS1() {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(87,25,375,275);
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
         this.scrollBuilder.buildText("Afferrando la pietra hai avuto una visione su ciò che era Eldoria prima che " +
                 "l’Ordine delle Ombre ne prendesse il controllo. Tu sei il prescelto. Il tuo compito è di portare la " +
                 "Pietra dell’Aurora al centro di Eldoria e di posizionarla in cima alla statua per riportare la luce " +
                 "e ristabilire la pace sull’intero regno. Il tuo cammino è appena iniziato giovane contadino. Come ti " +
                 "ha detto Gideon, l’anziano sacerdote, nella visione, recati da Cedric, il druido del Bosco degli " +
                 "Spiriti Avvolti.");
-        this.buttonBuilder.buildDimension(215,335,125,30);
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Vai da Cedric");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             States.S1.setVisible(false);
             States.S2.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder.build());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
     }
-    public JPanel makePanelS2(){
+
+    public JPanel makePanelS2() {
         ImageIcon backgroundImage = new ImageIcon(
                 FileSystems
                         .getDefault()
@@ -102,7 +105,7 @@ public class PanelDirector {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(0,25,305,275);
+        this.scrollBuilder.buildDimension(0, 25, 305, 275);
         this.scrollBuilder.buildText("Cedric: salve giovane avventuriero…non riesco a credere ai miei occhi, stai " +
                 "brandendo la Pietra dell’Aurora quindi sei tu il prescelto della profezia, colui che riporterà la " +
                 "luce ad Eldoria e restaurerà la pace. Eldoria sta vivendo dei tempi bui e la città pullula di soldati " +
@@ -112,25 +115,25 @@ public class PanelDirector {
                 "Gideon, fu l’unico essere ad averlo percorso e ad essere sopravvissuto. Sbrigati, giovane avventuriero" +
                 ", Sauron può avvertire l’essenza della Pietra dell’Aurora e non tarderà a cercarla. Il destino di " +
                 "Eldoria è nelle tue mani. ");
-        labelBackgroundImage.setBounds(320,25,235,275);
-        this.buttonBuilder.buildDimension(215,335,125,30);
+        labelBackgroundImage.setBounds(320, 25, 235, 275);
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Avventurati");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             States.S2.setVisible(false);
             States.S3.setVisible(true);
         });
 
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,this.buttonBuilder.build());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, this.buttonBuilder.build());
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS3(){
+    public JPanel makePanelS3() {
         this.panelBuilder.reset();
         //scroll
         this.scrollBuilder.reset();
-        this.scrollBuilder.buildDimension(87,25,375,275);
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
         this.scrollBuilder.buildText("Se avanti vuoi andare, il bivio devi oltrepassare.\n\n\n" +
                 "Due sentieri s'aprono al tuo cammino,\n" +
                 "Uno più difficile, un destino divino.\n" +
@@ -139,9 +142,9 @@ public class PanelDirector {
                 "Quale sentiero scegli?");
         //bottone SI
         this.buttonBuilder.reset();
-        this.buttonBuilder.buildDimension(325,335,125,30);
+        this.buttonBuilder.buildDimension(325, 335, 125, 30);
         this.buttonBuilder.buildText("DESTRA");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             States.S3.setVisible(false);
@@ -150,20 +153,20 @@ public class PanelDirector {
         JButton button1 = this.buttonBuilder.build();
         //bottone NO
         this.buttonBuilder.reset();
-        this.buttonBuilder.buildDimension(100,335,125,30);
+        this.buttonBuilder.buildDimension(100, 335, 125, 30);
         this.buttonBuilder.buildText("SINISTRA");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             States.S3.setVisible(false);
             States.S4.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2);
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2);
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS4(){ //Inserire ascoltatore sui bottoni per andare ad S5
+    public JPanel makePanelS4() { //Inserire ascoltatore sui bottoni per andare ad S5
         ImageIcon backgroundImage = new ImageIcon(
                 FileSystems
                         .getDefault()
@@ -174,31 +177,81 @@ public class PanelDirector {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(0,25,305,275);
+        this.scrollBuilder.buildDimension(0, 25, 305, 275);
         this.scrollBuilder.buildText("Ti incammini lungo il sentiero e osservi una tavola di legno.\n" +
                 "\n" + "Vuoi raccoglierla?");
-        labelBackgroundImage.setBounds(320,25,235,275);
-        this.buttonBuilder.buildDimension(120,335,125,30);
+        labelBackgroundImage.setBounds(320, 25, 235, 275);
+        this.buttonBuilder.buildDimension(120, 335, 125, 30);
         this.buttonBuilder.buildText("Si");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             eren.getItem(itemDirector.constructBoard());
+            States.S6.setVisible(true);
+            States.S4.setVisible(false);
         });
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
-        this.buttonBuilder.buildDimension(290,335,125,30);
+        this.buttonBuilder.buildDimension(290, 335, 125, 30);
         this.buttonBuilder.buildText("No");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.S6.setVisible(true);
+            States.S4.setVisible(false);
+        });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,button1,button2);
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2);
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS5(){
+    public JPanel makePanelS5() {
         return new JPanel();
     }
+
+    public JPanel makePanelS6() {
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildText("Ti trovi davanti ad un fiume e devi attraversarlo per proseguire la tua avventura.");
+
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(325, 335, 125, 30);
+        this.buttonBuilder.buildText("AVVENTURATI");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            if(eren.useItem(itemDirector.constructBoard())){
+                JOptionPane.showMessageDialog(null,"Posizionando la tavola di legno in verticale sopra il fiume, è di una dimensione"+
+                        " \nsufficiente per creare un piccolo ponte. \nComplimenti! Puoi attraversare il fiume");
+                States.S6.setVisible(false);
+                States.S7.setVisible(true);
+            }
+            else {
+                JOptionPane.showMessageDialog(null,"Quanto sarebbe bello se avessi una tavola di legno..");
+            }
+
+        });
+
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(100, 335, 125, 30);
+        this.buttonBuilder.buildText("INDIETRO");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.S6.setVisible(false);
+            States.S4.setVisible(true);
+
+
+        });
+        JButton button2 = this.buttonBuilder.build();
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2);
+        return this.panelBuilder.build();
+    }
+
+
+
     public JPanel makePanelS7(){
         this.panelBuilder.reset();
         this.scrollBuilder.reset();

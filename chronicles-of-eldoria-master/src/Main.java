@@ -21,12 +21,9 @@ public class Main {
         i.putItem(stone);
         */
         //InventoryFrame.getInventoryFrame();
-        FrameDiProva.initGUI();
+        //FrameDiProva.initGUI();
 
-        //States.S0.setVisible(true);
-        //States.S1.setVisible(true);
-        States.S4.setVisible(true);
-        //States.S7.setVisible(true);
+        States.S6.setVisible(true);
 
     }
 }

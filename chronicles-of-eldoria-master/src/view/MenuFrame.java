@@ -4,6 +4,8 @@ package view;
 import controller.ButtonWindowAdapter;
 
 import view.buttons.ConcreteButtonBuilder;
+import view.states.States;
+
 import javax.swing.*;
 import java.awt.*;
 import java.nio.file.FileSystems;
@@ -56,6 +58,11 @@ public class MenuFrame extends JFrame {
         JLabel labelBackgroundImage = new JLabel(backgroundImage);
         labelBackgroundImage.setBounds(0,0,800,614);
         contentPanel.add(labelBackgroundImage);
+
+        this.buttonBuilder.buildListener(event -> {
+            this.dispose();
+            States.S0.setVisible(true);
+        });
 
         this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
