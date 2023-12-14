@@ -10,7 +10,7 @@ import view.states.States;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
-        MenuFrame.getMenuFrame();
+        //MenuFrame.getMenuFrame();
 
         //Prova Inventario
         ItemBuilder itemBuilder = new ConcreteItemBuilder();
@@ -20,8 +20,10 @@ public class Main {
         Item stone = itemDirector.constructStone();
         i.putItem(stone);
 
-        InventoryFrame.getInventoryFrame();
+        //InventoryFrame.getInventoryFrame();
 
         States.S1.setVisible(true);
+        States.S7.setVisible(true);
+
     }
 }
