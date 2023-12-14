@@ -3,6 +3,7 @@ import model.items.ConcreteItemBuilder;
 import model.items.Item;
 import model.items.ItemBuilder;
 import model.items.ItemDirector;
+import view.FrameDiProva;
 import view.InventoryFrame;
 import view.MenuFrame;
 import view.states.States;
@@ -20,9 +21,12 @@ public class Main {
         i.putItem(stone);
         */
         //InventoryFrame.getInventoryFrame();
+        FrameDiProva.initGUI();
 
+        //States.S0.setVisible(true);
         //States.S1.setVisible(true);
+        States.S4.setVisible(true);
         //States.S7.setVisible(true);
-        States.S0.setVisible(true);
+
     }
 }
