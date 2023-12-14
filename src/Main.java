@@ -9,9 +9,8 @@ import view.states.States;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello");
         //MenuFrame.getMenuFrame();
-
+        /*
         //Prova Inventario
         ItemBuilder itemBuilder = new ConcreteItemBuilder();
         ItemDirector itemDirector = new ItemDirector(itemBuilder);
@@ -19,11 +18,11 @@ public class Main {
         Inventory i = Inventory.getInventory();
         Item stone = itemDirector.constructStone();
         i.putItem(stone);
-
+        */
         //InventoryFrame.getInventoryFrame();
 
-        States.S1.setVisible(true);
-        States.S7.setVisible(true);
-
+        //States.S1.setVisible(true);
+        //States.S7.setVisible(true);
+        States.S0.setVisible(true);
     }
 }
