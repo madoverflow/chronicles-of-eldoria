@@ -26,6 +26,45 @@ public class PanelDirector {
         this.panelBuilder = panelBuilder;
     }
 
+    public JPanel makePanelS0(){
+        this.panelBuilder.reset();
+        //scroll
+        this.scrollBuilder.reset();
+        this.scrollBuilder.buildDimension(25,25,275,275);
+        this.scrollBuilder.buildText("Eren, sei un contadino della periferia di Eldoria. Come tutti i giorni, stai lavorando sui tuoi terreni quando ad un tratto qualcosa di metallico si scontra con la tua pala\n\n\n"
+                + "CLANG!\n\n\n"
+                + "E’ una pietra dalle sembianze simili alla Pietra dell’Aurora di cui narra la leggenda.\n\n\n"
+                + "LA VUOI RACCOGLIERE?"
+                );
+        //labelimage
+        ImageIcon backgroundImage = new ImageIcon(
+                FileSystems
+                        .getDefault()
+                        .getPath("src/model/assets/contadino.png")
+                        .toString()
+        );
+        JLabel labelBackgroundImage = new JLabel(backgroundImage);
+        labelBackgroundImage.setBounds(350,25,175,275);
+        //bottone SI
+        this.buttonBuilder1.reset();
+        this.buttonBuilder1.buildDimension(325,335,125,30);
+        this.buttonBuilder1.buildText("SI");
+        this.buttonBuilder1.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder1.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder1.buildListener(event -> {
+            States.S0.setVisible(false);
+            States.S1.setVisible(true);
+        });
+        //bottone NO
+        this.buttonBuilder2.reset();
+        this.buttonBuilder2.buildDimension(100,335,125,30);
+        this.buttonBuilder2.buildText("NO");
+        this.buttonBuilder2.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder2.buildForegroundColor(Color.WHITE);
+
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,this.buttonBuilder1.build(),this.buttonBuilder2.build());
+        return this.panelBuilder.build();
+    }
     public JPanel makePanelS1(){
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
@@ -74,10 +113,57 @@ public class PanelDirector {
         this.buttonBuilder1.buildText("Avventurati");
         this.buttonBuilder1.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder1.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder1.buildListener(event -> {
+            States.S2.setVisible(false);
+            States.S3.setVisible(true);
+        });
+
         this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,this.buttonBuilder1.build());
         return this.panelBuilder.build();
     }
 
+    public JPanel makePanelS3(){
+        this.panelBuilder.reset();
+        //scroll
+        this.scrollBuilder.reset();
+        this.scrollBuilder.buildDimension(87,25,375,275);
+        this.scrollBuilder.buildText("Se avanti vuoi andare, il bivio devi oltrepassare.\n\n\n" +
+                "Due sentieri s'aprono al tuo cammino,\n" +
+                "Uno più difficile, un destino divino.\n" +
+                "La luce risplende in uno, ma attento...\n" +
+                "Nel buio nasce spesso l'avvento.\n\n\n" +
+                "Quale sentiero scegli?");
+        //bottone SI
+        this.buttonBuilder1.reset();
+        this.buttonBuilder1.buildDimension(325,335,125,30);
+        this.buttonBuilder1.buildText("DESTRA");
+        this.buttonBuilder1.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder1.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder1.buildListener(event -> {
+            States.S3.setVisible(false);
+            States.S5.setVisible(true);
+        });
+        //bottone NO
+        this.buttonBuilder2.reset();
+        this.buttonBuilder2.buildDimension(100,335,125,30);
+        this.buttonBuilder2.buildText("SINISTRA");
+        this.buttonBuilder2.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder2.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder1.buildListener(event -> {
+            States.S3.setVisible(false);
+            States.S4.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder1.build(),this.buttonBuilder2.build());
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS4(){
+        return new JPanel();
+    }
+
+    public JPanel makePanelS5(){
+        return new JPanel();
+    }
     public JPanel makePanelS7(){
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
