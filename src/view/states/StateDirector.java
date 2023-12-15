@@ -78,4 +78,17 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS8());
         return this.stateBuilder.build();
     }
+
+    public JFrame makeState9(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS9());
+        return this.stateBuilder.build();
+    }
+    public JFrame makeStateCrypt(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelCrypt());
+        return this.stateBuilder.build();
+    }
 }

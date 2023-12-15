@@ -1,5 +1,9 @@
 package view.panels;
 
+import model.crypt.ConcreteHistory;
+import model.crypt.ConcretePalindromic;
+import model.crypt.ConcretePrimes;
+import model.crypt.Crypt;
 import model.items.ConcreteItemBuilder;
 import model.items.ItemDirector;
 import model.npc.*;
@@ -21,6 +25,7 @@ public class PanelDirector {
     private final ButtonBuilder buttonBuilder = new ConcreteButtonBuilder();
     private final Player eren = Eren.getInstance(); //Riferimento al protagonista da usare per gli oggetti
     private final ItemDirector itemDirector = new ItemDirector(new ConcreteItemBuilder());
+    private static final Crypt CRYPT = Crypt.getInstance();
 
     public PanelDirector(PanelBuilder panelBuilder) {
         this.panelBuilder = panelBuilder;
@@ -307,6 +312,97 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS9(){
+        JButton palindromicButton, historyButton, primesButton;
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(25,0,505,295);
+        this.scrollBuilder.buildText("Giungi davanti alla porta delle cripte. Su di essa è scolpito\n\n" +
+                "Scegli tra gli enigmi uno dei tre,\n" +
+                "Il superamento, la chiave sarà per me.\n" +
+                "Accedere al mio interno, l'arte svelerà,\n" +
+                "Con risposte sagge, la porta si spalancherà.");
+        this.buttonBuilder.buildDimension(45,335,185,30);
+        this.buttonBuilder.buildText("Numero parole palindrome");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event ->{
+            PanelDirector.CRYPT.setMessage(ConcretePalindromic.getInstance().getEnigma());
+            PanelDirector.CRYPT.setStrategy(ConcretePalindromic.getInstance());
+            States.stateCrypt();
+            States.S9.setVisible(false);
+            States.sCrypt.setVisible(true);
+        });
+        this.buttonBuilder.buildTip("Contare le parole palindrome escluse sotto parole");
+        palindromicButton = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(240,335,125,30);
+        this.buttonBuilder.buildText("Storia di Eldoria");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event ->{
+            PanelDirector.CRYPT.setMessage(ConcreteHistory.getInstance().getEnigma());
+            PanelDirector.CRYPT.setStrategy(ConcreteHistory.getInstance());
+            States.stateCrypt();
+            States.S9.setVisible(false);
+            States.sCrypt.setVisible(true);
+        });
+        historyButton = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(375,335,125,30);
+        this.buttonBuilder.buildText("Numeri primi");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event ->{
+            PanelDirector.CRYPT.setMessage(ConcretePrimes.getInstance().getEnigma());
+            PanelDirector.CRYPT.setStrategy(ConcretePrimes.getInstance());
+            States.stateCrypt();
+            States.S9.setVisible(false);
+            States.sCrypt.setVisible(true);
+        });
+        this.buttonBuilder.buildTip("Scrivere i numeri separati da uno spazio bianco");
+        primesButton = this.buttonBuilder.build();
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),palindromicButton,historyButton,primesButton);
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelCrypt() {
+        JTextField textField = new JTextField();
+        JButton openButton, backButton;
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(25, 100, 505, 105);
+        this.scrollBuilder.buildText(PanelDirector.CRYPT.getMessage());
+        this.buttonBuilder.buildDimension(183, 300, 185, 30);
+        this.buttonBuilder.buildText("Apri");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            if (PanelDirector.CRYPT.open(textField.getText())) {
+                States.sCrypt.setVisible(false);
+                States.S1.setVisible(true);
+            } else
+                JOptionPane.showMessageDialog(null, "Hai sbagliato la risposta.\nRitenta o cambia" +
+                        " enigma\nLa cripta è rimasta chiusa.");
+        });
+        openButton = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(183, 350, 185, 30);
+        this.buttonBuilder.buildText("Indietro");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.sCrypt.setVisible(false);
+            States.S9.setVisible(true);
+        });
+        backButton = this.buttonBuilder.build();
+        textField.setBounds(183, 235, 185, 30);
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), textField, openButton, backButton);
         return this.panelBuilder.build();
     }
 }

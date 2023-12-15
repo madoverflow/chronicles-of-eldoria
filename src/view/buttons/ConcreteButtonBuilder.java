@@ -63,4 +63,8 @@ public class ConcreteButtonBuilder implements ButtonBuilder{
         this.button.addActionListener(actionListener);
     }
 
+    @Override
+    public void buildTip(String tip) {
+        this.button.setToolTipText(tip);
+    }
 }

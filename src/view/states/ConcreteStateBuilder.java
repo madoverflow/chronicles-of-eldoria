@@ -4,12 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.nio.file.FileSystems;
 
-public class ConcreteFinalStateBuilder implements StateBuilder {
+public class ConcreteStateBuilder implements StateBuilder {
     private JFrame state;
     private JPanel panel;
     private JLabel labelBackgroundImage;
 
-    public ConcreteFinalStateBuilder(){
+    public ConcreteStateBuilder(){
         this.reset();
     }
 
@@ -18,12 +18,14 @@ public class ConcreteFinalStateBuilder implements StateBuilder {
         Container contentPane = this.state.getContentPane();
         contentPane.add(this.panel);
         contentPane.add(this.labelBackgroundImage);
+        ImageIcon frameIcon = new ImageIcon(FileSystems.getDefault().getPath("src/model/assets/sun.png").toString());
+        this.state.setIconImage(frameIcon.getImage());
         return this.state;
     }
 
     @Override
     public void reset() {
-        this.state = new JFrame();
+        this.state = new JFrame("Chronicles of Eldoria");
         this.panel = new JPanel();
         this.labelBackgroundImage = new JLabel();
         state.setSize(new Dimension(800, 650));
