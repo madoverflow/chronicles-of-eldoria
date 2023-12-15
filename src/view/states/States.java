@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class States {
     private static final StateDirector STATE_DIRECTOR = new StateDirector(new ConcreteStateBuilder());
+    public static final JFrame sIncipit = States.STATE_DIRECTOR.makeStateIncipit();
     public static final JFrame S0 = States.STATE_DIRECTOR.makeState0();
     public static final JFrame S1 = States.STATE_DIRECTOR.makeState1();
     public static final JFrame S2 = States.STATE_DIRECTOR.makeState2();

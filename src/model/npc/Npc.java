@@ -1,5 +1,7 @@
 package model.npc;
 
+import model.items.Item;
+
 public abstract class Npc {
     private final String name;
     private final String imagePath;
@@ -15,5 +17,11 @@ public abstract class Npc {
 
     public final String getImagePath() {
         return this.imagePath;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Npc)) return false;
+        Npc npc = (Npc) obj;
+        return this.getName().equals(npc.getName());
     }
 }

@@ -61,7 +61,7 @@ public class MenuFrame extends JFrame {
 
         this.buttonBuilder.buildListener(event -> {
             this.dispose();
-            States.S0.setVisible(true);
+            States.sIncipit.setVisible(true);
         });
 
         this.setSize(800, 600);

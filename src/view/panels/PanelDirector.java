@@ -35,6 +35,49 @@ public class PanelDirector {
         this.panelBuilder = panelBuilder;
     }
 
+    public JPanel makePanelIncipit() {
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(0, 0, 550, 300); //550x400
+        this.scrollBuilder.buildText("Ci troviamo nel regno magico di Eldoria, il regno della luce.\n" +
+                "Al centro di tale regno, è presente una statua con in cima un talismano: Pietra dell’Aurora.\n" +
+                "Questa pietra permette di convogliare la luce del sole e della luna in un unico punto rendendola così " +
+                "una fonte che alimenta la magia di Eldoria ed un cerchio ristretto di abitanti chiamati I Sacerdoti " +
+                "della Luce Astrale, il cui compito è quello di sfruttare la magia della luce per avvolgere Eldoria in " +
+                "uno scudo di luce che protegge il regno dalle forze oscure esterne.\nGrazie ai Sacerdoti della Luce " +
+                "Astrale, il regno di Eldoria viveva nella pace e nella prosperità da secoli.\nTuttavia, ben presto Eldoria " +
+                "sarebbe stata avvolta dall’oscurità a causa di un’entità malvagia: Sauron, il Signore delle Ombre.\n" +
+                "Era noto per il suo dominio di terrore e fama di conquista, i quali avevano ormai coinvolti tutti i regni " +
+                "attorno ad Eldoria.\nEldoria sarebbe stata l’ultimo tassello del puzzle per Sauron, se non fosse per i " +
+                "Sarcedoti della Luce Astrale, i quali erano riusciti a proteggerla per tutto questo tempo.\nPurtroppo " +
+                "in un fatidico giorno si verificò una strana anomalia per cui lo scudo di luce, seppur in minima parte, " +
+                "s’indebolì generando una piccola frattura sulla sua superficie.\nSauron non aspettava nient’altro che un " +
+                "evento del genere per poter infiltrarsi ad Eldoria e fare in modo che lo scudo di luce crollasse per sempre.\n" +
+                "Sfruttando questa piccola frattura, egli riuscì attraverso la sua enorme potenza nella magia oscura a far " +
+                "cadere la Pietra dell’Aurora dalla statua di Eldoria facendo in modo che tutta la magia, la luce e di " +
+                "conseguenza lo scudo, scomparissero da Eldoria. La scomparsa dello scudo, permise a lui ed alle sue armate, " +
+                "di conquistare tutto ciò che incontrò nel suo cammino fino al centro del regno.\nL’obiettivo? Conquistare " +
+                "Eldoria ed in particolare eliminare per sempre l’Ordine dei Sacerdoti della Luce Astrale, così da estirpare " +
+                "per sempre la magia della luce da Eldoria e completare il dominio su tutti i regni.\nTuttavia nel caos " +
+                "della battaglia, Gideon, l’anziano sacerdote, riesce ad afferrare la pietra e a sfuggire, il tempo necessario, " +
+                "alle forze delle ombre, per lanciare un incantesimo che avrebbe trasferito un pezzo della sua anima all’interno " +
+                "della pietra per poi nasconderla da Sauron fino a quando un giovane erede dei Sacerdoti della Luce Astrale, " +
+                "l’avrebbe ritrovata entrando così in contatto con quest’ultima e conoscendo la verità su ciò che è stato " +
+                "e riportare Eldoria agli antichi splendori dopo la conquista del Signore delle Ombre.\nDa quel giorno, " +
+                "calarono le tenebre su Eldoria e il Regno delle Ombre ebbe inizio.\nDella pietra non si seppe più nulla " +
+                "e la verità, col tempo, divenne leggenda…");
+        this.buttonBuilder.buildDimension(203, 335, 150, 30);
+        this.buttonBuilder.buildText("Inizia l'avventura");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.sIncipit.setVisible(false);
+            States.S0.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
     public JPanel makePanelS0() {
         this.panelBuilder.reset();
         //scroll
@@ -49,11 +92,11 @@ public class PanelDirector {
         ImageIcon backgroundImage = new ImageIcon(
                 FileSystems
                         .getDefault()
-                        .getPath("src/model/assets/contadino.png")
+                        .getPath("src/model/assets/eren.png")
                         .toString()
         );
         JLabel labelBackgroundImage = new JLabel(backgroundImage);
-        labelBackgroundImage.setBounds(350, 25, 175, 275);
+        labelBackgroundImage.setBounds(325, 25, 235, 275);
         //bottone SI
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
@@ -61,6 +104,7 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
+            eren.getItem(itemDirector.constructStone());
             States.S0.setVisible(false);
             States.S1.setVisible(true);
         });
@@ -71,6 +115,9 @@ public class PanelDirector {
         this.buttonBuilder.buildText("NO");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            JOptionPane.showMessageDialog(null,"Consiglio: raccogli la pietra!");
+        });
         JButton button2 = this.buttonBuilder.build();
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2);
         return this.panelBuilder.build();
@@ -281,7 +328,7 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS7(){
+    public JPanel makePanelS7(){ //Stato in cui Eren si fa seguire da Lythien
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
@@ -295,8 +342,10 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
+            eren.npcFollow(Lythien.getInstance());
             States.S7.setVisible(false);
             States.S8.setVisible(true);
+            //System.out.println(eren.getNpcList().contains(Lythien.getInstance()));
         });
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
@@ -304,6 +353,11 @@ public class PanelDirector {
         this.buttonBuilder.buildText("Continuo per la mia strada");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.S7.setVisible(false);
+            States.S9.setVisible(true);
+            //System.out.println(eren.getNpcList().contains(Lythien.getInstance()));
+        });
         JButton button2 = this.buttonBuilder.build();
         this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2);
         return this.panelBuilder.build();
