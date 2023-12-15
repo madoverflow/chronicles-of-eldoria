@@ -91,4 +91,15 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelCrypt());
         return this.stateBuilder.build();
     }
+
+    public JFrame makeState10(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS10());
+        return this.stateBuilder.build();
+    }
+
+    public JFrame makeState11(){
+        return null;
+    }
 }
