@@ -211,7 +211,35 @@ public class PanelDirector {
     }
 
     public JPanel makePanelS5() {
-        return new JPanel();
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        JTextField inputTextField = new JTextField();
+        this.scrollBuilder.buildDimension(80, 0, 380, 275);
+        this.scrollBuilder.buildText("Ti trovi davanti ad un fiume e devi attraversarlo per proseguire la tua avventura.\n" +
+                "Un cartello posto in prossimità recita:\n\n" +
+                "\"Se il fiume vorrai attraversare, l’indovinello dovrai indovinare\".\n\n***\nIndovina indovinello:\n" +
+                "io guido un bel battello,\nse voglio cambio direzione,\navrai capito sono il…\n***");
+        inputTextField.setBounds(215,290,125,30);
+        inputTextField.setToolTipText("Inserisci qui la risposta");
+        inputTextField.setHorizontalAlignment(JTextField.CENTER);
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
+        this.buttonBuilder.buildText("Conferma");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            if (inputTextField.getText().equalsIgnoreCase("timone")) {
+                JOptionPane.showMessageDialog(null,"Delle pietre emergono dal fiume e compongono " +
+                        "un passaggio.\nAdesso puoi attraversarlo!");
+                States.S5.setVisible(false);
+                States.S7.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Hai sbagliato! Riprova.");
+            }
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),inputTextField,this.buttonBuilder.build());
+        return this.panelBuilder.build();
     }
 
     public JPanel makePanelS6() {
@@ -404,5 +432,30 @@ public class PanelDirector {
         textField.setBounds(183, 235, 185, 30);
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), textField, openButton, backButton);
         return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS10() {
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildText("L’interno delle cripte risulta poco luminoso. \nAvventurarti con questa scarsa luminosità risulta impossibile."+
+                "Caso vuole che attorno a te ci sono delle fiaccole."+
+                "\n Vedendole, capisce che sarà necessario prenderne una per continuare il viaggio.");
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
+        this.buttonBuilder.buildText("Afferra fiaccola");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            eren.getItem(itemDirector.constructLight());
+            States.S10.setVisible(false);
+            States.S11.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS11(){
+        return null;
     }
 }
