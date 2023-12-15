@@ -17,4 +17,5 @@ public interface ButtonBuilder {
     void buildOpaque(boolean flag);
     void buildBorder(Border border);
     void buildListener(ActionListener actionListener);
+    void buildTip(String tip);
 }

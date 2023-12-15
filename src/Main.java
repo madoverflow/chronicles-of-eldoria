@@ -23,7 +23,7 @@ public class Main {
         //InventoryFrame.getInventoryFrame();
         FrameDiProva.initGUI();
 
-        States.S4.setVisible(true);
+        States.S9.setVisible(true);
         //States.S6.setVisible(true);
 
     }
