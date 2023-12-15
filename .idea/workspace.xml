@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b63c7cd7-5c2a-41cc-96e1-173fe6a5016e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chronicles-of-eldoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chronicles-of-eldoria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/inventory/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ConcreteItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ConcreteItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ItemDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Lythien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Lythien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/player/Eren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/player/Eren.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/FrameDiProva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FrameDiProva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/InventoryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InventoryFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MenuFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/scroll/ConcreteScrollBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/scroll/ConcreteScrollBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/scroll/ScrollBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/scroll/ScrollBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteFinalStateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteFinalStateBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteNonFinalStateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteNonFinalStateBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/StateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/StateBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/StateDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/StateDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/States.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2ZZivgcOFriuHkGZakC7HWhoGIo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="chronicles-of-eldoria" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b63c7cd7-5c2a-41cc-96e1-173fe6a5016e" name="Changes" comment="" />
+      <created>1702636236082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702636236082</updated>
+    </task>
+    <servers />
+  </component>
+</project>
