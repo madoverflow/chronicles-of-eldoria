@@ -17,6 +17,12 @@ public class StateDirector {
         this.stateBuilder = stateBuilder;
     }
 
+    public JFrame makeStateIncipit(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelIncipit());
+        return this.stateBuilder.build();
+    }
     public JFrame makeState0(){
         this.stateBuilder.reset();
         this.stateBuilder.buildBackground("src/model/assets/sfondo.png");

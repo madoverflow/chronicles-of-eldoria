@@ -6,6 +6,7 @@ import model.items.ItemDirector;
 import view.FrameDiProva;
 import view.InventoryFrame;
 import view.MenuFrame;
+import view.states.StateDirector;
 import view.states.States;
 
 public class Main {
@@ -23,7 +24,9 @@ public class Main {
         //InventoryFrame.getInventoryFrame();
         FrameDiProva.initGUI();
 
-        States.S9.setVisible(true);
+        States.sIncipit.setVisible(true);
+        //States.S7.setVisible(true);
+        //States.S9.setVisible(true);
         //States.S6.setVisible(true);
 
     }
