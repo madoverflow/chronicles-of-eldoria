@@ -40,14 +40,14 @@ public class PanelDirector {
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
         this.scrollBuilder.buildDimension(0, 0, 550, 300); //550x400
-        this.scrollBuilder.buildText("Ci troviamo nel regno magico di Eldoria, il regno della luce.\n" +
-                "Al centro di tale regno, è presente una statua con in cima un talismano: Pietra dell’Aurora.\n" +
+        this.scrollBuilder.buildText("Ci troviamo nel regno magico di \"Eldoria\", il regno della luce.\n" +
+                "Al centro di tale regno, è presente una statua con in cima un talismano: \"Pietra dell’Aurora\".\n" +
                 "Questa pietra permette di convogliare la luce del sole e della luna in un unico punto rendendola così " +
-                "una fonte che alimenta la magia di Eldoria ed un cerchio ristretto di abitanti chiamati I Sacerdoti " +
-                "della Luce Astrale, il cui compito è quello di sfruttare la magia della luce per avvolgere Eldoria in " +
+                "una fonte che alimenta la magia di Eldoria ed un cerchio ristretto di abitanti chiamati \"I Sacerdoti " +
+                "della Luce Astrale\", il cui compito è quello di sfruttare la magia della luce per avvolgere Eldoria in " +
                 "uno scudo di luce che protegge il regno dalle forze oscure esterne.\nGrazie ai Sacerdoti della Luce " +
                 "Astrale, il regno di Eldoria viveva nella pace e nella prosperità da secoli.\nTuttavia, ben presto Eldoria " +
-                "sarebbe stata avvolta dall’oscurità a causa di un’entità malvagia: Sauron, il Signore delle Ombre.\n" +
+                "sarebbe stata avvolta dall’oscurità a causa di un’entità malvagia: \"Sauron, il Signore delle Ombre\".\n" +
                 "Era noto per il suo dominio di terrore e fama di conquista, i quali avevano ormai coinvolti tutti i regni " +
                 "attorno ad Eldoria.\nEldoria sarebbe stata l’ultimo tassello del puzzle per Sauron, se non fosse per i " +
                 "Sarcedoti della Luce Astrale, i quali erano riusciti a proteggerla per tutto questo tempo.\nPurtroppo " +
@@ -60,7 +60,7 @@ public class PanelDirector {
                 "di conquistare tutto ciò che incontrò nel suo cammino fino al centro del regno.\nL’obiettivo? Conquistare " +
                 "Eldoria ed in particolare eliminare per sempre l’Ordine dei Sacerdoti della Luce Astrale, così da estirpare " +
                 "per sempre la magia della luce da Eldoria e completare il dominio su tutti i regni.\nTuttavia nel caos " +
-                "della battaglia, Gideon, l’anziano sacerdote, riesce ad afferrare la pietra e a sfuggire, il tempo necessario, " +
+                "della battaglia, \"Gideon\", l’anziano sacerdote, riesce ad afferrare la pietra e a sfuggire, il tempo necessario, " +
                 "alle forze delle ombre, per lanciare un incantesimo che avrebbe trasferito un pezzo della sua anima all’interno " +
                 "della pietra per poi nasconderla da Sauron fino a quando un giovane erede dei Sacerdoti della Luce Astrale, " +
                 "l’avrebbe ritrovata entrando così in contatto con quest’ultima e conoscendo la verità su ciò che è stato " +
@@ -520,24 +520,23 @@ public class PanelDirector {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(0,25,305,275);
+        this.scrollBuilder.buildDimension(0,15,320,280);
         this.scrollBuilder.buildText("Grazie alla fiaccola raccolta, il percorso è abbastanza luminoso e riesci ad avventurarti. " +
                 "Da lontano, lungo il tuo cammino, intravedi un cancello con affianco una figura avvolta in un mantello nero come la notte. " +
                 "Il suo volto è un mistero, nascosto dietro una maschera di freddo disinteresse e occhi penetranti come pozzi senza fondo. " +
                 "I suoi lunghi capelli corvini cadono come strisce di oscurità lungo il suo volto pallido, mentre una risata sinistra risuona nell'aria come un'eco lugubre." +
-                "\n\nMalgrim Ombroso:\n" + "\"Salve, giovane avventuriero. Per proseguire il tuo cammino devi superare il cancello che si pone davanti a te.\nDue sono le possibilità: \""
+                "\n\nMalgrim Ombroso:\n" + "\"Salve, giovane avventuriero. Per proseguire il tuo cammino devi superare il cancello che si pone davanti a te.\nDue sono le possibilità:"
                 + "\n\n•Inserire la sequenza corretta di numeri per sbloccare la serratura."+
-                "\n\n•La inserirò io per te, ma tutto ha un costo: in cambio, dovrai dirmi dove sei diretto."
+                "\n\n•La inserirò io per te, ma tutto ha un costo: in cambio, dovrai dirmi dove sei diretto.\""
                 + "\n\nLa figura misteriosa e cupa ti suscita qualche timore. Cosa scegli di fare?");
-        labelBackgroundImage.setBounds(320,25,235,275);
+        labelBackgroundImage.setBounds(325,25,235,275);
         this.buttonBuilder.buildDimension(80,335,180,30);
         this.buttonBuilder.buildText("Inserisco la sequenza");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             States.S11.setVisible(false);
-            //States.S12.setVisible(true);
-
+            States.S12.setVisible(true);
         });
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
@@ -548,10 +547,13 @@ public class PanelDirector {
         this.buttonBuilder.buildListener(event -> {
             eren.npcFollow(Malgrim.getInstance());
             States.S11.setVisible(false);
-            //States.S13.setVisible(true);
+            States.S13.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
         this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2, labelBackgroundImage);
         return this.panelBuilder.build();
     }
+
+    public JPanel makePanelS12(){return null;}
+    public JPanel makePanelS13(){return null;}
 }

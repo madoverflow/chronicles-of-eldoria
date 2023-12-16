@@ -111,4 +111,7 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS11());
         return this.stateBuilder.build();
     }
+
+    public JFrame makeState12(){return null;}
+    public JFrame makeState13(){return null;}
 }

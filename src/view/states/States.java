@@ -18,6 +18,8 @@ public class States {
     public static JFrame sCrypt = States.STATE_DIRECTOR.makeStateCrypt();
     public static final JFrame S10 = States.STATE_DIRECTOR.makeState10();
     public static final JFrame S11 = States.STATE_DIRECTOR.makeState11();
+    public static final JFrame S12 = States.STATE_DIRECTOR.makeState12();
+    public static final JFrame S13 = States.STATE_DIRECTOR.makeState13();
 
     public static void stateCrypt(){States.sCrypt = States.STATE_DIRECTOR.makeStateCrypt();};
 }
