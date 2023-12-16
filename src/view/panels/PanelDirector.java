@@ -525,12 +525,12 @@ public class PanelDirector {
                 "Da lontano, lungo il tuo cammino, intravedi un cancello con affianco una figura avvolta in un mantello nero come la notte. " +
                 "Il suo volto è un mistero, nascosto dietro una maschera di freddo disinteresse e occhi penetranti come pozzi senza fondo. " +
                 "I suoi lunghi capelli corvini cadono come strisce di oscurità lungo il suo volto pallido, mentre una risata sinistra risuona nell'aria come un'eco lugubre." +
-                "\n\nMalgrim Ombroso:\n" + "\"Salve, giovane avventuriero. Per proseguire il tuo cammino devi superare il cancello che si pone davanti a te. Due sono le possibilità: \""
+                "\n\nMalgrim Ombroso:\n" + "\"Salve, giovane avventuriero. Per proseguire il tuo cammino devi superare il cancello che si pone davanti a te.\nDue sono le possibilità: \""
                 + "\n\n•Inserire la sequenza corretta di numeri per sbloccare la serratura."+
                 "\n\n•La inserirò io per te, ma tutto ha un costo: in cambio, dovrai dirmi dove sei diretto."
                 + "\n\nLa figura misteriosa e cupa ti suscita qualche timore. Cosa scegli di fare?");
         labelBackgroundImage.setBounds(320,25,235,275);
-        this.buttonBuilder.buildDimension(90,335,125,30);
+        this.buttonBuilder.buildDimension(80,335,180,30);
         this.buttonBuilder.buildText("Inserisco la sequenza");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
@@ -541,7 +541,7 @@ public class PanelDirector {
         });
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
-        this.buttonBuilder.buildDimension(260,335,200,30);
+        this.buttonBuilder.buildDimension(290,335,170,30);
         this.buttonBuilder.buildText("Gli dico dove vado");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
@@ -551,7 +551,7 @@ public class PanelDirector {
             //States.S13.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2);
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2, labelBackgroundImage);
         return this.panelBuilder.build();
     }
 }

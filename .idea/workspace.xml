@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b63c7cd7-5c2a-41cc-96e1-173fe6a5016e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/assets/malgrim.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/npc/Malgrim.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chronicles-of-eldoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chronicles-of-eldoria.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/states/StateDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/StateDirector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;state11-demo&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
