@@ -124,16 +124,24 @@ public class PanelDirector {
     }
 
     public JPanel makePanelS1() {
+        ImageIcon backgroundImage = new ImageIcon(
+                FileSystems
+                        .getDefault()
+                        .getPath("src/model/assets/stone state.png")
+                        .toString()
+        );
+        JLabel labelBackgroundImage = new JLabel(backgroundImage);
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildDimension(0, 25, 305, 275);
         this.scrollBuilder.buildText("Afferrando la pietra hai avuto una visione su ciò che era Eldoria prima che " +
                 "l’Ordine delle Ombre ne prendesse il controllo. Tu sei il prescelto. Il tuo compito è di portare la " +
                 "Pietra dell’Aurora al centro di Eldoria e di posizionarla in cima alla statua per riportare la luce " +
                 "e ristabilire la pace sull’intero regno. Il tuo cammino è appena iniziato giovane contadino. Come ti " +
                 "ha detto Gideon, l’anziano sacerdote, nella visione, recati da Cedric, il druido del Bosco degli " +
                 "Spiriti Avvolti.");
+        labelBackgroundImage.setBounds(320, 25, 235, 275);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Vai da Cedric");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
@@ -142,7 +150,7 @@ public class PanelDirector {
             States.S1.setVisible(false);
             States.S2.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build(), labelBackgroundImage);
         return this.panelBuilder.build();
     }
 
@@ -218,7 +226,7 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS4() { //Inserire ascoltatore sui bottoni per andare ad S5
+    public JPanel makePanelS4() {
         ImageIcon backgroundImage = new ImageIcon(
                 FileSystems
                         .getDefault()
@@ -393,6 +401,10 @@ public class PanelDirector {
         this.buttonBuilder.buildText("Prosegui");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.S8.setVisible(false);
+            States.S9.setVisible(true);
+        });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,this.buttonBuilder.build());
         return this.panelBuilder.build();
     }
@@ -489,13 +501,21 @@ public class PanelDirector {
     }
 
     public JPanel makePanelS10() {
+        ImageIcon backgroundImage = new ImageIcon(
+                FileSystems
+                        .getDefault()
+                        .getPath("src/model/assets/torch state.png")
+                        .toString()
+        );
+        JLabel labelBackgroundImage = new JLabel(backgroundImage);
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(87, 25, 375, 275);
-        this.scrollBuilder.buildText("L’interno delle cripte risulta poco luminoso. \nAvventurarti con questa scarsa luminosità risulta impossibile."+
+        this.scrollBuilder.buildDimension(0, 25, 300, 275);
+        this.scrollBuilder.buildText("L’interno delle cripte risulta poco luminoso.\nAvventurarti con questa scarsa luminosità risulta impossibile."+
                 "Caso vuole che attorno a te ci sono delle fiaccole."+
-                "\n Vedendole, capisce che sarà necessario prenderne una per continuare il viaggio.");
+                "\nVedendole, capisci che sarà necessario prenderne una per continuare il viaggio.");
+        labelBackgroundImage.setBounds(315, 25, 235, 275);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Afferra fiaccola");
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
@@ -505,7 +525,7 @@ public class PanelDirector {
             States.S10.setVisible(false);
             States.S11.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build(), labelBackgroundImage);
         return this.panelBuilder.build();
     }
 
