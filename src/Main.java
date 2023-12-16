@@ -24,10 +24,11 @@ public class Main {
         //InventoryFrame.getInventoryFrame();
         FrameDiProva.initGUI();
 
-        States.sIncipit.setVisible(true);
+        //States.sIncipit.setVisible(true);
         //States.S7.setVisible(true);
         //States.S9.setVisible(true);
         //States.S6.setVisible(true);
+        States.S11.setVisible(true);
 
     }
 }
