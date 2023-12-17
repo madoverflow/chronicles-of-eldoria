@@ -32,14 +32,6 @@ class PlayerTest {
         assertNotNull(eren, "Non è stato possibile istanziare un oggetto di tipo Player");
     }
 
-    @AfterEach
-    void tearDown() {
-        inventory = null;
-        itemDirector = null;
-        item = null;
-        eren = null;
-    }
-
     @Test
     void useItem() {
         assertTrue(eren.useItem(item));
