@@ -9,6 +9,7 @@ import model.items.ItemDirector;
 import model.npc.*;
 import model.player.Eren;
 import model.player.Player;
+import view.MenuFrame;
 import view.buttons.ButtonBuilder;
 import view.buttons.ConcreteButtonBuilder;
 import view.scroll.ConcreteScrollBuilder;
@@ -576,4 +577,53 @@ public class PanelDirector {
 
     public JPanel makePanelS12(){return null;}
     public JPanel makePanelS13(){return null;}
+    public JPanel makePanelS14(){
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildText("Finalmente, dopo un’avventura insidiosa e piena di pericoli, ti trovi al centro di Eldoria.\n" +
+                "Da lontano, vedi l’imponente, maestosa statua di Eldoria. Il tuo obiettivo è quasi compiuto, basta mettere la pietra in cima.\n\n" +
+                "Tuttavia, forze nemiche sono schierate intorno alla statua.\n\n" +
+                "Devi dirigerti verso la statua velocemente e prestando attenzione a non farti vedere.");
+        this.buttonBuilder.buildDimension(200, 335, 140, 30);
+        this.buttonBuilder.buildText("Vai verso la statua");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            States.S14.setVisible(false);
+            States.S15.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS15(){return null;}
+
+    public JPanel makePanelS18(){
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildText("La magia inizia a scorrere dentro di te. Senti la voce di Gideon dentro di te che dice\n\n" +
+                "“Per battere Sauron devi incanalare tutta la magia della pietra dell’Aurora. Questo consumerà il tuo corpo e la tua anima. Pertanto, richiederà il tuo sacrificio.”\n\n" +
+                "Il coraggio non ti manca e sei disposto a sacrificarti pur di riportare la luce ad Eldoria e farla tornare al suo vecchio splendore, sconfiggendo Sauron.\n\n" +
+                "Tuttavia mentre ti stai concentrando e stai sacrificando la tua anima per controllare la PIETRA DELL'AURORA spunta Malgrim Ombroso alle tue spalle e ti sottrae la pietra, interrompendo l’incanalamento della magia sul tuo corpo e consegna la pietra a Sauron, distruggendo ogni tua speranza.\n\n" +
+                "Malgrim infatti era proprio un aiutante segreto di Sauron che sorvegliava le cripte della città e quando gli hai confidato le tue intezioni ti ha seguito di nascosto per evitare che il tuo piano di salvare Eldoria andasse a buon fine.\n\n" +
+                "Sauron a questo punto vedendoti indifeso e privato della pietra decide di renderti suo schiavo per farti soffrire fino alla fine dei tuoi giorni…");
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
+        this.buttonBuilder.buildText("Finisci il gioco");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            JOptionPane.showMessageDialog(null,"Tips:  Non dovresti fidarti di certi individui.\n\n" +
+                    "Consiglio per il futuro:  Cerca di risolvere gli enigmi con le tue conoscenze senza farti aiutare da individui loschi..." +
+                    "\nla via più semplice non sempre è quella giusta.\n\n" +
+                    "Clicca OK per iniziare una nuova partita!");
+            States.S18.setVisible(false);
+            MenuFrame.getMenuFrame();
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
 }
