@@ -26,11 +26,13 @@ public class Main {
 
         MenuFrame.getMenuFrame();
         //States.sIncipit.setVisible(true);
-        States.S1.setVisible(true);
+        //States.S1.setVisible(true);
         //States.S7.setVisible(true);
         //States.S9.setVisible(true);
         //States.S6.setVisible(true);
-        States.S10.setVisible(true);
+        //States.S10.setVisible(true);
+        //States.S14.setVisible(true);
+        //States.S18.setVisible(true);
 
     }
 }

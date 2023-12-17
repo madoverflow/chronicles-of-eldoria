@@ -114,4 +114,18 @@ public class StateDirector {
 
     public JFrame makeState12(){return null;}
     public JFrame makeState13(){return null;}
+    public JFrame makeState14(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS14());
+        return this.stateBuilder.build();
+    }
+    public JFrame makeState15(){return null;}
+
+    public JFrame makeState18(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS18());
+        return this.stateBuilder.build();
+    }
 }
