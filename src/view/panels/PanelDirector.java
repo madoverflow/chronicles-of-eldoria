@@ -6,6 +6,7 @@ import model.crypt.ConcretePrimes;
 import model.crypt.Crypt;
 import model.items.ConcreteItemBuilder;
 import model.items.ItemDirector;
+import model.npc.Npc;
 import model.npc.*;
 import model.player.Eren;
 import model.player.Player;
@@ -19,6 +20,7 @@ import view.states.States;
 import javax.swing.*;
 import java.awt.*;
 import java.nio.file.FileSystems;
+import java.util.List;
 
 public class PanelDirector {
     private PanelBuilder panelBuilder;
@@ -480,7 +482,7 @@ public class PanelDirector {
         this.buttonBuilder.buildListener(event -> {
             if (PanelDirector.CRYPT.open(textField.getText())) {
                 States.sCrypt.setVisible(false);
-                States.S1.setVisible(true);
+                States.S10.setVisible(true);
             } else
                 JOptionPane.showMessageDialog(null, "Hai sbagliato la risposta.\nRitenta o cambia" +
                         " enigma\nLa cripta è rimasta chiusa.");
@@ -566,6 +568,9 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
+            JOptionPane.showMessageDialog(null,"Rivelando a Malgrim la tua destinazione, come " +
+                    "promesso da lui, si apre il cancello, permettendoti di proseguire.\nAdesso Malgrim sa dove sei " +
+                    "diretto... ");
             eren.npcFollow(Malgrim.getInstance());
             States.S11.setVisible(false);
             States.S13.setVisible(true);
@@ -575,7 +580,44 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS12(){return null;}
+    public JPanel makePanelS12(){
+        Integer[] option = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        JComboBox list1 = new JComboBox(option);
+        JComboBox list2 = new JComboBox(option);
+        JComboBox list3 = new JComboBox(option);
+        list1.setBounds(100,250,50,20);
+        list2.setBounds(250,250,50,20);
+        list3.setBounds(400,250,50,20);
+        this.scrollBuilder.buildDimension(0, 0, 550, 200);
+        this.scrollBuilder.buildText("Tre indovinelli, uno per ciascuna chiave. Inserisci le risposte nel pannello " +
+                "corrispondente." + "\n\n" +
+                "1. Quante 'a' ci sono in questa frase?" + "\n\n" +
+                "2. Sono il mese dell'anno piu' corto, ma alle volte mi allungo un po'. Chi sono?" + "\n\n" +
+                "3. \"Il TREno dei desideri, nei miei pensieri all'incontrario va!\" Seleziona il numero nascosto " +
+                "presente all'interno di questa frase.");
+        this.buttonBuilder.buildDimension(203, 335, 150, 30);
+        this.buttonBuilder.buildText("Sblocca");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            if (list1.getSelectedIndex() == 4 && list2.getSelectedIndex() == 2 && list3.getSelectedIndex() == 3) {
+                States.S12.setVisible(false);
+                States.S13.setVisible(true);
+                list1.setSelectedIndex(0);
+                list2.setSelectedIndex(0);
+                list3.setSelectedIndex(0);
+            }
+            else {
+                JOptionPane.showMessageDialog(null,"Sequenza errata, riprova!");
+            }
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder.build(),list1,list2,list3);
+        return this.panelBuilder.build();
+    }
+
     public JPanel makePanelS13(){return null;}
     public JPanel makePanelS14(){
         this.panelBuilder.reset();
@@ -598,7 +640,69 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS15(){return null;}
+    public JPanel makePanelS15(){ //Deccommentare ascoltatori nonappena ci saranno tutti i finali
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(0, 0, 550, 300);
+        this.scrollBuilder.buildText("Sauron si materializza davanti a te impedendoti così di raggiungere la cima della statua. " +
+                "\n\nLa sua apparente forza ti suscita talmente tanta paura da avere tremore in tutto il corpo. " +
+                "Paura e adrenalina si fondono insieme creando un mix perfetto che ti fa pietrificare davanti al nemico. " +
+                "\n\nAd un tratto, come per l’aiuto dell’elfo nel Bosco degli Spiriti Avvolti, senti una voce provenire dalla " +
+                "Pietra dell’Aurora.");
+        this.buttonBuilder.buildDimension(200, 335, 140, 30);
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildText("Afferra la pietra");
+        this.buttonBuilder.buildListener(event -> {
+           eren.useItem(itemDirector.constructStone());
+           List<Npc> list = eren.getNpcList();
+           if(list.contains(Lythien.getInstance()) && list.contains(Malgrim.getInstance())) {
+               States.S15.setVisible(false);
+               //States.S19.setVisible(true);
+           } else if (list.contains(Lythien.getInstance()) && !(list.contains(Malgrim.getInstance()))) {
+               States.S15.setVisible(false);
+               States.S17.setVisible(true);
+           } else if (list.contains(Malgrim.getInstance()) && !(list.contains(Lythien.getInstance()))) {
+               States.S15.setVisible(false);
+               States.S18.setVisible(true);
+           }
+           else{
+               States.S15.setVisible(false);
+               //States.S16.setVisible(true);
+           }
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS17() { //Sistemare ascoltatore Menu
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(0, 0, 550, 300);
+        this.scrollBuilder.buildText("La magia inizia a scorrere dentro di te. Senti la voce di Gideon dentro di te che " +
+                "dice:\n\nPer battere Sauron devi incanalare tutta la magia della pietra dell’Aurora. Questo consumerà " +
+                "il tuo corpo e la tua anima. Pertanto, richiederà il tuo sacrificio.\n\nAd un tratto, da lontano vedi " +
+                "arrivare Lythien, l’elfo che hai salvato nel bosco.\n\nLythien: \"Non potevo perdermi questo storico " +
+                "momento. Come ti ho detto: gli elfi sono riconoscenti e ti devo un favore. Distrarrò Sauron, vai a " +
+                "posizionare la pietra in cima alla statua cosicché da porre fine a tutto.  PER ELVERIOOOOOOOON!\"" +
+                "\n\n...\n\nGrazie a Lythien, arrivi in cima e posizioni la pietra. La magia viene sprigionata dalla " +
+                "statua e sia Eldoria che i regni circoscritti tornano a splendere di luce celeste abbattendo e ponendo " +
+                "fine all’Ordine delle Ombre, Sauron scompare insieme ad esso.");
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
+        this.buttonBuilder.buildText("Finisci il gioco");
+        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
+        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildListener(event -> {
+            JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
+                    "sconfiggendo Sauron!");
+            States.S17.setVisible(false);
+            //States.sMenu.setvisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
 
     public JPanel makePanelS18(){
         this.panelBuilder.reset();
@@ -617,8 +721,8 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(Color.WHITE);
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Tips:  Non dovresti fidarti di certi individui.\n\n" +
-                    "Consiglio per il futuro:  Cerca di risolvere gli enigmi con le tue conoscenze senza farti aiutare da individui loschi..." +
-                    "\nla via più semplice non sempre è quella giusta.\n\n" +
+                    "Consiglio per il futuro:  Cerca di risolvere gli enigmi con le tue conoscenze senza farti aiutare " +
+                    "da individui loschi... \nla via più semplice non sempre è quella giusta.\n\n" +
                     "Clicca OK per iniziare una nuova partita!");
             States.S18.setVisible(false);
             MenuFrame.getMenuFrame();
