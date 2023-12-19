@@ -112,7 +112,12 @@ public class StateDirector {
         return this.stateBuilder.build();
     }
 
-    public JFrame makeState12(){return null;}
+    public JFrame makeState12(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS12());
+        return this.stateBuilder.build();
+    }
     public JFrame makeState13(){return null;}
     public JFrame makeState14(){
         this.stateBuilder.reset();
@@ -120,8 +125,20 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS14());
         return this.stateBuilder.build();
     }
-    public JFrame makeState15(){return null;}
 
+    public JFrame makeState15() {
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS15());
+        return this.stateBuilder.build();
+    }
+
+    public JFrame makeState17() {
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS17());
+        return this.stateBuilder.build();
+    }
     public JFrame makeState18(){
         this.stateBuilder.reset();
         this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
