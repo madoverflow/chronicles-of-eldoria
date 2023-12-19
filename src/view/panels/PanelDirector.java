@@ -10,7 +10,6 @@ import model.npc.Npc;
 import model.npc.*;
 import model.player.Eren;
 import model.player.Player;
-import view.MenuFrame;
 import view.buttons.ButtonBuilder;
 import view.buttons.ConcreteButtonBuilder;
 import view.scroll.ConcreteScrollBuilder;
@@ -38,6 +37,24 @@ public class PanelDirector {
         this.panelBuilder = panelBuilder;
     }
 
+    public JPanel makePanelMenu(){
+        JLabel title = new JLabel("CHRONICLES OF ELDORIA");
+        title.setForeground(Color.BLACK);
+        title.setFont(new Font("Times New Roman", Font.PLAIN, 45));
+        title.setBounds(0, -59, 580, 150);
+        this.panelBuilder.reset();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildText("START");
+        this.buttonBuilder.buildDimension(190, 330, 175, 75);
+        this.buttonBuilder.buildForegroundColor(Color.BLACK);
+        this.buttonBuilder.builFont(new Font("Times New Roman", Font.PLAIN, 30));
+        this.buttonBuilder.buildListener(event -> {
+            States.sMenu.setVisible(false);
+            States.sIncipit.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.buttonBuilder.build(),title);
+        return this.panelBuilder.build();
+    }
     public JPanel makePanelIncipit() {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
@@ -725,7 +742,7 @@ public class PanelDirector {
                     "da individui loschi... \nla via più semplice non sempre è quella giusta.\n\n" +
                     "Clicca OK per iniziare una nuova partita!");
             States.S18.setVisible(false);
-            MenuFrame.getMenuFrame();
+            States.sMenu.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();

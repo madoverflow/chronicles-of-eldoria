@@ -4,6 +4,8 @@ import javax.swing.*;
 
 public class States {
     private static final StateDirector STATE_DIRECTOR = new StateDirector(new ConcreteStateBuilder());
+
+    public static final JFrame sMenu = States.STATE_DIRECTOR.makeStateMenu();
     public static final JFrame sIncipit = States.STATE_DIRECTOR.makeStateIncipit();
     public static final JFrame S0 = States.STATE_DIRECTOR.makeState0();
     public static final JFrame S1 = States.STATE_DIRECTOR.makeState1();
@@ -23,8 +25,6 @@ public class States {
     public static final JFrame S14 = States.STATE_DIRECTOR.makeState14();
     public static final JFrame S15 = States.STATE_DIRECTOR.makeState15();
     public static final JFrame S17 = States.STATE_DIRECTOR.makeState17();
-
-
     public static final JFrame S18 = States.STATE_DIRECTOR.makeState18();
 
     public static void stateCrypt(){States.sCrypt = States.STATE_DIRECTOR.makeStateCrypt();};
