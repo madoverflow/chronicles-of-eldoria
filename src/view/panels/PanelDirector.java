@@ -802,7 +802,7 @@ public class PanelDirector {
            List<Npc> list = eren.getNpcList();
            if(list.contains(Lythien.getInstance()) && list.contains(Malgrim.getInstance())) {
                States.S15.setVisible(false);
-               //States.S19.setVisible(true);
+               States.S19.setVisible(true);
            } else if (list.contains(Lythien.getInstance()) && !(list.contains(Malgrim.getInstance()))) {
                States.S15.setVisible(false);
                States.S17.setVisible(true);
@@ -812,7 +812,7 @@ public class PanelDirector {
            }
            else{
                States.S15.setVisible(false);
-               //States.S16.setVisible(true);
+               States.S16.setVisible(true);
            }
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
@@ -842,7 +842,7 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS17() { //Sistemare ascoltatore Menu
+    public JPanel makePanelS17() {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
@@ -862,7 +862,7 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
-                    "sconfiggendo Sauron!");
+                    "sconfiggendo Sauron!\n\nConsiglio: rigioca l'avventura prendendo scelte diverse per scoprire gli altri finali!");
             States.S17.setVisible(false);
             States.STATE_MENU.setVisible(true);
         });
@@ -891,6 +891,49 @@ public class PanelDirector {
                     "da individui loschi... \nla via più semplice non sempre è quella giusta.\n\n" +
                     "Clicca OK per iniziare una nuova partita!");
             States.S18.setVisible(false);
+            States.STATE_MENU.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+
+    public JPanel makePanelS19() {
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(0, 0, 550, 300);
+        this.scrollBuilder.buildText("La magia inizia a scorrere dentro di te. Senti la voce di Gideon dentro di te che dice\n" +
+                "\n" +
+                "\"Per battere Sauron devi incanalare tutta la magia della pietra dell’Aurora. Questo consumerà il tuo corpo e la tua anima. Pertanto, richiederà il tuo sacrificio.\"\n" +
+                "\n" +
+                "Il coraggio non ti manca e sei disposto a sacrificarti pur di riportare la luce ad Eldoria e farla tornare al suo vecchio splendore, sconfiggendo Sauron.\n" +
+                "\n" +
+                "Tuttavia mentre ti stai concentrando e stai sacrificando la tua anima per controllare la Pietra dell’Aurora spunta Malgrim Ombroso alle tue spalle intento a sottrarti la pietra per interrompere l’incanalamento della magia e distruggere ogni tua speranza.\n" +
+                "\n" +
+                "Tuttavia ad un tratto si sente un sibilo nell’aria, è la freccia di Lythien che ricordandosi del tuo aiuto contro l’orco che la stava aggredendo è giunta ad aiutarti coprendoti le spalle e colpendo Malgrim facendolo accasciare a terra. \n" +
+                "\n" +
+                "Lythien:”non potevo perdermi questo storico momento. Come ti ho detto: gli elfi sono riconoscenti e ti devo un favore. Adesso continua ad incanalare la magia necessaria per sconfiggere Sauron, io continuerò a coprirti le sp…”\n" +
+                "\n" +
+                "*Lythien cade a terra*\n" +
+                "\n" +
+                "Malgrim pur essendo stato colpito da una freccia di Lythien era ancora in fin di vita e con un ultimo sforzo scaglia un dardo magico che la colpisce dritta al cuore, uccidendola sul colpo e dopodicchè esalò l’ultimo respiro anche lui.\n" +
+                "\n" +
+                "Vedendo la tua amica sacrificarsi per te vieni pervaso da una forza d’animo innata che ti permette di controllare a pieno la potenza magica della pietra senza necessità di sacrificare il tuo corpo ed il tuo spirito.\n" +
+                "\n" +
+                "Sei diventato un tutt’uno con la magia della luce e sblocchi una nuova forma corporea, \"il Sommo Astrale\", un’entità al di sopra di tutto anche dei Sacerdoti della Luce Astrale.\n" +
+                "\n" +
+                "Adesso grazie alla tua nuova potenza magica innata scagli un raggio di luce contro Sauron riuscendo a ferirlo e a darti il tempo necessario per raggiungere la statua senza opposizione, e collegarti fisicamente ad essa.\n" +
+                "\n" +
+                "La magia viene sprigionata dalla statua e sia Eldoria che i regni circoscritti tornano a splendere di luce celeste abbattendo e ponendo fine all’Ordine delle Ombre e a Sauron che scompare insieme ad esso.");
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
+        this.buttonBuilder.buildText("Finisci il gioco");
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildListener(event -> {
+            JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
+                    "sconfiggendo Sauron!\n\nPurtroppo però Lythien è stata uccisa a causa di una tua scelta sbagliata." +
+                    "\n\nConsiglio: rigioca l'avventura prendendo scelte diverse per scoprire gli altri finali!");
+            States.S19.setVisible(false);
             States.STATE_MENU.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());

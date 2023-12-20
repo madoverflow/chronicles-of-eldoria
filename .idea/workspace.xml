@@ -5,9 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b63c7cd7-5c2a-41cc-96e1-173fe6a5016e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chronicles-of-eldoria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chronicles-of-eldoria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonFollowNpcAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPullInventoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonPutInventoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ButtonWindowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InventoryKeyListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/crypt/ConcreteHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/crypt/ConcreteHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/crypt/ConcretePalindromic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/crypt/ConcretePalindromic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/crypt/ConcretePrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/crypt/ConcretePrimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/crypt/Crypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/crypt/Crypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/crypt/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/crypt/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/inventory/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ConcreteItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ConcreteItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/items/ItemDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/items/ItemDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Cedric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Cedric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Lythien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Lythien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Malgrim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Malgrim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/npc/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/player/Eren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/player/Eren.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ConcretePalindromicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ConcretePalindromicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/FrameDiProva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FrameDiProva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/InventoryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InventoryFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteWidePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteWidePanelBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/PanelDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/scroll/ConcreteScrollBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/scroll/ConcreteScrollBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/scroll/ScrollBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/scroll/ScrollBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/ConcreteStateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/ConcreteStateBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/states/StateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/StateBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/states/StateDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/StateDirector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/states/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/states/States.java" afterDir="false" />
     </list>

@@ -172,4 +172,10 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS18());
         return this.stateBuilder.build();
     }
+    public JFrame makeState19(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS19());
+        return this.stateBuilder.build();
+    }
 }
