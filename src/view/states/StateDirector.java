@@ -1,6 +1,7 @@
 package view.states;
 
 import view.panels.ConcreteStatePanelBuilder;
+import view.panels.ConcreteWidePanelBuilder;
 import view.panels.PanelDirector;
 
 import javax.swing.*;
@@ -124,8 +125,21 @@ public class StateDirector {
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS12());
         return this.stateBuilder.build();
     }
-    public JFrame makeState13(){return null;}
+    public JFrame makeState13(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS13());
+        return this.stateBuilder.build();
+    }
+    public JFrame makeStateTiles(){
+        this.panelDirector.changeBuilder(new ConcreteWidePanelBuilder());
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/cripta.jpg");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelTiles());
+        return this.stateBuilder.build();
+    }
     public JFrame makeState14(){
+        this.panelDirector.changeBuilder(new ConcreteStatePanelBuilder());
         this.stateBuilder.reset();
         this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
         this.stateBuilder.buildPanel(this.panelDirector.makePanelS14());

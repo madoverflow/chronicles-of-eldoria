@@ -21,6 +21,8 @@ public class Main {
         //States.S9.setVisible(true);
         //States.S6.setVisible(true);
         //States.S11.setVisible(true);
+        //States.S13.setVisible(true);
+        //States.sTiles.setVisible(true);
         //States.S14.setVisible(true);
         //States.S15.setVisible(true);
         //States.S18.setVisible(true);

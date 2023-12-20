@@ -17,7 +17,10 @@ import view.scroll.ScrollBuilder;
 import view.states.States;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.nio.file.FileSystems;
 import java.util.List;
 
@@ -89,8 +92,8 @@ public class PanelDirector {
                 "e la verità, col tempo, divenne leggenda…");
         this.buttonBuilder.buildDimension(203, 335, 150, 30);
         this.buttonBuilder.buildText("Inizia l'avventura");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.sIncipit.setVisible(false);
             States.S0.setVisible(true);
@@ -103,10 +106,10 @@ public class PanelDirector {
         //scroll
         this.scrollBuilder.reset();
         this.scrollBuilder.buildDimension(25, 25, 275, 275);
-        this.scrollBuilder.buildText("Eren, sei un contadino della periferia di Eldoria. Come tutti i giorni, stai lavorando sui tuoi terreni quando ad un tratto qualcosa di metallico si scontra con la tua pala\n\n\n"
-                + "CLANG!\n\n\n"
-                + "E’ una pietra dalle sembianze simili alla Pietra dell’Aurora di cui narra la leggenda.\n\n\n"
-                + "LA VUOI RACCOGLIERE?"
+        this.scrollBuilder.buildText("Eren, sei un contadino della periferia di Eldoria. Come tutti i giorni, stai lavorando sui tuoi terreni quando ad un tratto qualcosa di metallico si scontra con la tua pala\n\n"
+                + "CLANG!\n\n"
+                + "E’ una pietra dalle sembianze simili alla Pietra dell’Aurora di cui narra la leggenda.\n\n"
+                + "La vuoi raccogliere?"
         );
         //labelimage
         ImageIcon backgroundImage = new ImageIcon(
@@ -121,8 +124,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
         this.buttonBuilder.buildText("SI");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             eren.getItem(itemDirector.constructStone());
             States.S0.setVisible(false);
@@ -133,8 +136,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
         this.buttonBuilder.buildText("NO");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Consiglio: raccogli la pietra!");
         });
@@ -164,8 +167,8 @@ public class PanelDirector {
         labelBackgroundImage.setBounds(320, 25, 235, 275);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Vai da Cedric");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S1.setVisible(false);
             States.S2.setVisible(true);
@@ -198,8 +201,8 @@ public class PanelDirector {
         labelBackgroundImage.setBounds(320, 25, 235, 275);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Avventurati");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S2.setVisible(false);
             States.S3.setVisible(true);
@@ -220,23 +223,23 @@ public class PanelDirector {
                 "La luce risplende in uno, ma attento...\n" +
                 "Nel buio nasce spesso l'avvento.\n\n\n" +
                 "Quale sentiero scegli?");
-        //bottone SI
+
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
         this.buttonBuilder.buildText("DESTRA");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S3.setVisible(false);
             States.S5.setVisible(true);
         });
         JButton button1 = this.buttonBuilder.build();
-        //bottone NO
+
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
         this.buttonBuilder.buildText("SINISTRA");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S3.setVisible(false);
             States.S4.setVisible(true);
@@ -263,8 +266,8 @@ public class PanelDirector {
         labelBackgroundImage.setBounds(320, 25, 235, 275);
         this.buttonBuilder.buildDimension(120, 335, 125, 30);
         this.buttonBuilder.buildText("Si");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             eren.getItem(itemDirector.constructBoard());
             States.S4.setVisible(false);
@@ -274,8 +277,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(290, 335, 125, 30);
         this.buttonBuilder.buildText("No");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S4.setVisible(false);
             States.S6.setVisible(true);
@@ -300,8 +303,8 @@ public class PanelDirector {
         inputTextField.setHorizontalAlignment(JTextField.CENTER);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Conferma");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             if (inputTextField.getText().equalsIgnoreCase("timone")) {
                 JOptionPane.showMessageDialog(null,"Delle pietre emergono dal fiume e compongono " +
@@ -326,8 +329,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
         this.buttonBuilder.buildText("AVVENTURATI");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             if(eren.useItem(itemDirector.constructBoard())){
                 JOptionPane.showMessageDialog(null,"Posizionando la tavola di legno in verticale " +
@@ -345,8 +348,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
         this.buttonBuilder.buildText("INDIETRO");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S6.setVisible(false);
             States.S4.setVisible(true);
@@ -367,8 +370,8 @@ public class PanelDirector {
                 "attaccando un essere femminile dalle sembianze elfiche. Cosa decidi di fare?");
         this.buttonBuilder.buildDimension(90,335,125,30);
         this.buttonBuilder.buildText("Aiuto l'elfo");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             eren.npcFollow(Lythien.getInstance());
             States.S7.setVisible(false);
@@ -379,8 +382,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(260,335,200,30);
         this.buttonBuilder.buildText("Continuo per la mia strada");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S7.setVisible(false);
             States.S9.setVisible(true);
@@ -419,8 +422,8 @@ public class PanelDirector {
         labelBackgroundImage.setBounds(320,25,235,275);
         this.buttonBuilder.buildDimension(215,335,125,30);
         this.buttonBuilder.buildText("Prosegui");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S8.setVisible(false);
             States.S9.setVisible(true);
@@ -442,8 +445,8 @@ public class PanelDirector {
                 "Con risposte sagge, la porta si spalancherà.");
         this.buttonBuilder.buildDimension(45,335,185,30);
         this.buttonBuilder.buildText("Numero parole palindrome");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event ->{
             PanelDirector.CRYPT.setMessage(ConcretePalindromic.getInstance().getEnigma());
             PanelDirector.CRYPT.setStrategy(ConcretePalindromic.getInstance());
@@ -456,8 +459,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(240,335,125,30);
         this.buttonBuilder.buildText("Storia di Eldoria");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event ->{
             PanelDirector.CRYPT.setMessage(ConcreteHistory.getInstance().getEnigma());
             PanelDirector.CRYPT.setStrategy(ConcreteHistory.getInstance());
@@ -469,8 +472,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(375,335,125,30);
         this.buttonBuilder.buildText("Numeri primi");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event ->{
             PanelDirector.CRYPT.setMessage(ConcretePrimes.getInstance().getEnigma());
             PanelDirector.CRYPT.setStrategy(ConcretePrimes.getInstance());
@@ -494,8 +497,8 @@ public class PanelDirector {
         this.scrollBuilder.buildText(PanelDirector.CRYPT.getMessage());
         this.buttonBuilder.buildDimension(183, 300, 185, 30);
         this.buttonBuilder.buildText("Apri");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             if (PanelDirector.CRYPT.open(textField.getText())) {
                 States.sCrypt.setVisible(false);
@@ -508,8 +511,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(183, 350, 185, 30);
         this.buttonBuilder.buildText("Indietro");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.sCrypt.setVisible(false);
             States.S9.setVisible(true);
@@ -538,8 +541,8 @@ public class PanelDirector {
         labelBackgroundImage.setBounds(315, 25, 235, 275);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Afferra fiaccola");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             eren.getItem(itemDirector.constructLight());
             States.S10.setVisible(false);
@@ -572,8 +575,8 @@ public class PanelDirector {
         labelBackgroundImage.setBounds(325,25,235,275);
         this.buttonBuilder.buildDimension(80,335,180,30);
         this.buttonBuilder.buildText("Inserisco la sequenza");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S11.setVisible(false);
             States.S12.setVisible(true);
@@ -582,8 +585,8 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(290,335,170,30);
         this.buttonBuilder.buildText("Gli dico dove vado");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f,0.29f,0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Rivelando a Malgrim la tua destinazione, come " +
                     "promesso da lui, si apre il cancello, permettendoti di proseguire.\nAdesso Malgrim sa dove sei " +
@@ -617,8 +620,8 @@ public class PanelDirector {
                 "presente all'interno di questa frase.");
         this.buttonBuilder.buildDimension(203, 335, 150, 30);
         this.buttonBuilder.buildText("Sblocca");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             if (list1.getSelectedIndex() == 4 && list2.getSelectedIndex() == 2 && list3.getSelectedIndex() == 3) {
                 States.S12.setVisible(false);
@@ -635,7 +638,133 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS13(){return null;}
+    public JPanel makePanelS13(){
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(0, 0, 550, 300);
+        this.scrollBuilder.buildText("Pensavi che il peggio fosse passato, ma arrivi ad una strada interrotta. " +
+                "\nE’ necessario superarla per giungere alla fine ed uscire dalla cripta. Davanti a te, sospese in aria, " +
+                "ci sono due placche rocciose su cui poter mettere i piedi.\n\nUn cartello accanto ha scritto:\n\n" +
+                "\"Scegli con cura la placca su cui poggiare i piedi.\nLa placca corretta farà sospendere in avanti " +
+                "altre due placche fino a quando non raggiungerai l’altro bordo.\nLa placca sbagliata attiverà delle " +
+                "trappole che ti faranno ricominciare da capo.\nScegli con cura le placche su cui camminare se " +
+                "l’uscita vuoi trovare\".");
+        this.buttonBuilder.buildDimension(203, 335, 150, 30);
+        this.buttonBuilder.buildText("Vai all'enigma");
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildListener(event -> {
+            States.S13.setVisible(false);
+            States.sTiles.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+    public JPanel makePanelTiles(){
+        this.panelBuilder.reset();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(130,196,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(130,316,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button2 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(270,196,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button3 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(270,316,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button4 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(410,196,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button5 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(410,316,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button6 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(550,196,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button7 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildDimension(550,316,100,100);
+        this.buttonBuilder.buildBackgroundColor(Color.DARK_GRAY);
+        JButton button8 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildText("Esci dalla cripta");
+        this.buttonBuilder.buildDimension(318,483,150,30);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton buttonExit = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildText("Istruzioni");
+        this.buttonBuilder.buildDimension(100,483,100,30);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton buttonInfo = this.buttonBuilder.build();
+
+        buttonExit.setEnabled(false);
+        button3.setEnabled(false); button4.setEnabled(false); button5.setEnabled(false); button6.setEnabled(false); button7.setEnabled(false); button8.setEnabled(false);
+        //Sequenza corretta 1 4 6 7
+        //Prima Colonna
+        button1.addActionListener(event -> {
+            button1.setBackground(Color.GREEN);
+            button1.setEnabled(false); button2.setEnabled(false);
+            button3.setEnabled(true); button4.setEnabled(true);
+        });
+        //Seconda Colonna
+        button4.addActionListener(event -> {
+            button4.setBackground(Color.GREEN);
+            button4.setEnabled(false); button3.setEnabled(false);
+            button5.setEnabled(true); button6.setEnabled(true);
+        });
+        button3.addActionListener(event -> {
+            button1.setBackground(Color.DARK_GRAY);
+            button3.setEnabled(false); button4.setEnabled(false);
+            button1.setEnabled(true); button2.setEnabled(true);
+        });
+        //Terza Colonna
+        button6.addActionListener(event -> {
+            button6.setBackground(Color.GREEN);
+            button6.setEnabled(false); button5.setEnabled(false);
+            button7.setEnabled(true); button8.setEnabled(true);
+        });
+        button5.addActionListener(event -> {
+            button1.setBackground(Color.DARK_GRAY); button4.setBackground(Color.DARK_GRAY);
+            button5.setEnabled(false); button6.setEnabled(false);
+            button1.setEnabled(true); button2.setEnabled(true);
+        });
+        //Quarta Colonna
+        button7.addActionListener(event -> {
+            button7.setBackground(Color.GREEN);
+            button7.setEnabled(false); button8.setEnabled(false);
+            buttonExit.setEnabled(true);
+        });
+        button8.addActionListener(event -> {
+            button1.setBackground(Color.DARK_GRAY); button4.setBackground(Color.DARK_GRAY); button6.setBackground(Color.DARK_GRAY);
+            button8.setEnabled(false); button7.setEnabled(false);
+            button1.setEnabled(true); button2.setEnabled(true);
+        });
+
+        buttonExit.addActionListener(event ->{
+            JOptionPane.showMessageDialog(null,"Complimenti, hai superato la prova!" +
+                    "\nAdesso puoi uscire dalla cripta!");
+            States.sTiles.setVisible(false);
+            States.S14.setVisible(true);
+        });
+        buttonInfo.addActionListener(event -> {
+            JOptionPane.showMessageDialog(null,"Per superare la prova devi premere le placche rocciose " +
+                    "nell'ordine corretto da sinistra verso destra,\nselezionando una placca per ogni colonna.\nFai attenzione " +
+                    "a non sbagliare, altrimenti dovrai ricominciare da capo!");
+        });
+        this.panelBuilder.buildComponents(button1,button2,button3,button4,button5,button6,button7,button8,buttonExit,buttonInfo);
+        return this.panelBuilder.build();
+    }
     public JPanel makePanelS14(){
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
@@ -647,8 +776,8 @@ public class PanelDirector {
                 "Devi dirigerti verso la statua velocemente e prestando attenzione a non farti vedere.");
         this.buttonBuilder.buildDimension(200, 335, 140, 30);
         this.buttonBuilder.buildText("Vai verso la statua");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S14.setVisible(false);
             States.S15.setVisible(true);
@@ -668,8 +797,8 @@ public class PanelDirector {
                 "\n\nAd un tratto, come per l’aiuto dell’elfo nel Bosco degli Spiriti Avvolti, senti una voce provenire dalla " +
                 "Pietra dell’Aurora.");
         this.buttonBuilder.buildDimension(200, 335, 140, 30);
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildText("Afferra la pietra");
         this.buttonBuilder.buildListener(event -> {
            eren.useItem(itemDirector.constructStone());
@@ -709,13 +838,13 @@ public class PanelDirector {
                 "fine all’Ordine delle Ombre, Sauron scompare insieme ad esso.");
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Finisci il gioco");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
                     "sconfiggendo Sauron!");
             States.S17.setVisible(false);
-            //States.sMenu.setvisible(true);
+            States.sMenu.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
@@ -734,8 +863,8 @@ public class PanelDirector {
                 "Sauron a questo punto vedendoti indifeso e privato della pietra decide di renderti suo schiavo per farti soffrire fino alla fine dei tuoi giorni…");
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Finisci il gioco");
-        this.buttonBuilder.buildBackgroundColor(new Color(0.58f, 0.29f, 0f));
-        this.buttonBuilder.buildForegroundColor(Color.WHITE);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Tips:  Non dovresti fidarti di certi individui.\n\n" +
                     "Consiglio per il futuro:  Cerca di risolvere gli enigmi con le tue conoscenze senza farti aiutare " +

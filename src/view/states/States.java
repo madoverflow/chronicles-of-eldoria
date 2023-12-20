@@ -22,6 +22,7 @@ public class States {
     public static final JFrame S11 = States.STATE_DIRECTOR.makeState11();
     public static final JFrame S12 = States.STATE_DIRECTOR.makeState12();
     public static final JFrame S13 = States.STATE_DIRECTOR.makeState13();
+    public static final JFrame sTiles = States.STATE_DIRECTOR.makeStateTiles();
     public static final JFrame S14 = States.STATE_DIRECTOR.makeState14();
     public static final JFrame S15 = States.STATE_DIRECTOR.makeState15();
     public static final JFrame S17 = States.STATE_DIRECTOR.makeState17();

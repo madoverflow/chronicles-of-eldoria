@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b63c7cd7-5c2a-41cc-96e1-173fe6a5016e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/view/panels/ConcreteWidePanelBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
@@ -38,7 +39,6 @@
       <change beforePath="$PROJECT_DIR$/src/test/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/FrameDiProva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/FrameDiProva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/InventoryFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/InventoryFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MenuFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ButtonBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buttons/ConcreteButtonBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ConcreteStatePanelBuilder.java" afterDir="false" />
