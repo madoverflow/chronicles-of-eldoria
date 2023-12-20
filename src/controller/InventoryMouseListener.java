@@ -6,7 +6,7 @@ import view.InventoryFrame;
 
 public class InventoryMouseListener extends ButtonAdapter {
     private static InventoryFrame inventoryFrame;
-    private static boolean isClosed = true;
+    public static boolean isClosed = true;
 
     @Override
     public void mouseClicked(MouseEvent e){
