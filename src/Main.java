@@ -14,8 +14,8 @@ public class Main {
         //InventoryFrame.getInventoryFrame();
         //FrameDiProva.initGUI();
 
-        //States.sMenu.setVisible(true);
-        //States.sIncipit.setVisible(true);
+        States.STATE_MENU.setVisible(true);
+        //States.STATE_INCIPIT.setVisible(true);
         //States.S1.setVisible(true);
         //States.S7.setVisible(true);
         //States.S9.setVisible(true);
@@ -25,7 +25,8 @@ public class Main {
         //States.sTiles.setVisible(true);
         //States.S14.setVisible(true);
         //States.S15.setVisible(true);
-        States.S16.setVisible(true);
+        //States.S16.setVisible(true);
         //States.S18.setVisible(true);
+        //States.S19.setVisible(true);
     }
 }

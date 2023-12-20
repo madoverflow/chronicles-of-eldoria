@@ -28,6 +28,7 @@ public class States {
     public static final JFrame S16 = States.STATE_DIRECTOR.makeState16();
     public static final JFrame S17 = States.STATE_DIRECTOR.makeState17();
     public static final JFrame S18 = States.STATE_DIRECTOR.makeState18();
+    public static final JFrame S19 = States.STATE_DIRECTOR.makeState19();
 
     public static void stateCrypt(){States.stateCrypt = States.STATE_DIRECTOR.makeStateCrypt();};
 }
