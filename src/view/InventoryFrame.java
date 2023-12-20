@@ -47,8 +47,8 @@ public class InventoryFrame extends JFrame {
                     panBoard.setBorder(BorderFactory.createTitledBorder(border, "Board"));
                     labelBoardIcon.setIcon(item.getImageIcon());
                 }
-                case "Light" -> {
-                    panLight.setBorder(BorderFactory.createTitledBorder(border, "Light"));
+                case "Torch" -> {
+                    panLight.setBorder(BorderFactory.createTitledBorder(border, "Torch"));
                     labelLightIcon.setIcon(item.getImageIcon());
                 }
             }

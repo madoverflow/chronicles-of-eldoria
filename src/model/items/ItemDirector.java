@@ -18,9 +18,9 @@ public class ItemDirector {
         return itemBuilder.build();
     }
 
-    public Item constructLight() {
-        itemBuilder.buildName("Light");
-        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/light.png").toString());
+    public Item constructTorch() {
+        itemBuilder.buildName("Torch");
+        itemBuilder.buildImageIcon(FileSystems.getDefault().getPath("src/model/assets/torch.png").toString());
         return itemBuilder.build();
     }
 }
