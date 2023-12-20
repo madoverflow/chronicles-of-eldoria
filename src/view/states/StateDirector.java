@@ -153,6 +153,13 @@ public class StateDirector {
         return this.stateBuilder.build();
     }
 
+    public JFrame makeState16(){
+        this.stateBuilder.reset();
+        this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
+        this.stateBuilder.buildPanel(this.panelDirector.makePanelS16());
+        return this.stateBuilder.build();
+    }
+
     public JFrame makeState17() {
         this.stateBuilder.reset();
         this.stateBuilder.buildBackground("src/model/assets/sfondo.png");
