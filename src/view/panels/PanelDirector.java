@@ -1,5 +1,6 @@
 package view.panels;
 
+import controller.InventoryMouseListener;
 import model.crypt.ConcreteHistory;
 import model.crypt.ConcretePalindromic;
 import model.crypt.ConcretePrimes;
@@ -95,7 +96,16 @@ public class PanelDirector {
             States.STATE_INCIPIT.setVisible(false);
             States.S0.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, inventory);
         return this.panelBuilder.build();
     }
     public JPanel makePanelS0() {
@@ -120,7 +130,7 @@ public class PanelDirector {
         //bottone SI
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
-        this.buttonBuilder.buildText("SI");
+        this.buttonBuilder.buildText("Si");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
@@ -132,14 +142,22 @@ public class PanelDirector {
         //bottone NO
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
-        this.buttonBuilder.buildText("NO");
+        this.buttonBuilder.buildText("No");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Consiglio: raccogli la pietra!");
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2,inventory);
         return this.panelBuilder.build();
     }
 
@@ -170,7 +188,16 @@ public class PanelDirector {
             States.S1.setVisible(false);
             States.S2.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build(), labelBackgroundImage);
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, labelBackgroundImage, inventory);
         return this.panelBuilder.build();
     }
 
@@ -204,8 +231,16 @@ public class PanelDirector {
             States.S2.setVisible(false);
             States.S3.setVisible(true);
         });
-
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, inventory);
         return this.panelBuilder.build();
     }
 
@@ -223,7 +258,7 @@ public class PanelDirector {
 
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
-        this.buttonBuilder.buildText("DESTRA");
+        this.buttonBuilder.buildText("Destra");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
@@ -234,7 +269,7 @@ public class PanelDirector {
 
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
-        this.buttonBuilder.buildText("SINISTRA");
+        this.buttonBuilder.buildText("Sinistra");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
@@ -242,7 +277,15 @@ public class PanelDirector {
             States.S4.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2,inventory);
         return this.panelBuilder.build();
     }
 
@@ -281,7 +324,15 @@ public class PanelDirector {
             States.S6.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), labelBackgroundImage, button1, button2, inventory);
         return this.panelBuilder.build();
     }
 
@@ -310,10 +361,20 @@ public class PanelDirector {
                 States.S7.setVisible(true);
             }
             else{
-                JOptionPane.showMessageDialog(null,"Hai sbagliato! Riprova.");
+                JOptionPane.showMessageDialog(null,"Hai sbagliato! Riprova.\n\nConsiglio: è il " +
+                        "\"volante\" di una nave...");
             }
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),inputTextField,this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),inputTextField,button1,inventory);
         return this.panelBuilder.build();
     }
 
@@ -325,7 +386,7 @@ public class PanelDirector {
                 "avventura.");
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(325, 335, 125, 30);
-        this.buttonBuilder.buildText("AVVENTURATI");
+        this.buttonBuilder.buildText("Avventurati");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
@@ -344,7 +405,7 @@ public class PanelDirector {
         JButton button1 = this.buttonBuilder.build();
         this.buttonBuilder.reset();
         this.buttonBuilder.buildDimension(100, 335, 125, 30);
-        this.buttonBuilder.buildText("INDIETRO");
+        this.buttonBuilder.buildText("Indietro");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
@@ -352,7 +413,15 @@ public class PanelDirector {
             States.S4.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, button2,inventory);
         return this.panelBuilder.build();
     }
 
@@ -387,7 +456,15 @@ public class PanelDirector {
             //System.out.println(eren.getNpcList().contains(Lythien.getInstance()));
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2,inventory);
         return this.panelBuilder.build();
     }
     public JPanel makePanelS8(){
@@ -425,7 +502,16 @@ public class PanelDirector {
             States.S8.setVisible(false);
             States.S9.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),labelBackgroundImage,button1,inventory);
         return this.panelBuilder.build();
     }
 
@@ -480,7 +566,15 @@ public class PanelDirector {
         });
         this.buttonBuilder.buildTip("Scrivere i numeri separati da uno spazio bianco");
         primesButton = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),palindromicButton,historyButton,primesButton);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),palindromicButton,historyButton,primesButton,inventory);
         return this.panelBuilder.build();
     }
 
@@ -516,7 +610,16 @@ public class PanelDirector {
         });
         backButton = this.buttonBuilder.build();
         textField.setBounds(183, 235, 185, 30);
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), textField, openButton, backButton);
+        textField.setHorizontalAlignment(JTextField.CENTER);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), textField, openButton, backButton, inventory);
         return this.panelBuilder.build();
     }
 
@@ -541,11 +644,20 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
-            eren.getItem(itemDirector.constructLight());
+            eren.getItem(itemDirector.constructTorch());
             States.S10.setVisible(false);
             States.S11.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build(), labelBackgroundImage);
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, inventory,labelBackgroundImage);
         return this.panelBuilder.build();
     }
 
@@ -593,7 +705,15 @@ public class PanelDirector {
             States.S13.setVisible(true);
         });
         JButton button2 = this.buttonBuilder.build();
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2, labelBackgroundImage);
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,button2,inventory,labelBackgroundImage);
         return this.panelBuilder.build();
     }
 
@@ -631,7 +751,16 @@ public class PanelDirector {
                 JOptionPane.showMessageDialog(null,"Sequenza errata, riprova!");
             }
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder.build(),list1,list2,list3);
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,inventory,list1,list2,list3);
         return this.panelBuilder.build();
     }
 
@@ -655,7 +784,16 @@ public class PanelDirector {
             States.S13.setVisible(false);
             States.STATE_TILES.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(),button1,inventory);
         return this.panelBuilder.build();
     }
     public JPanel makePanelTiles(){
@@ -779,11 +917,20 @@ public class PanelDirector {
             States.S14.setVisible(false);
             States.S15.setVisible(true);
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, inventory);
         return this.panelBuilder.build();
     }
 
-    public JPanel makePanelS15(){ //Deccommentare ascoltatori nonappena ci saranno tutti i finali
+    public JPanel makePanelS15(){
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
@@ -815,7 +962,16 @@ public class PanelDirector {
                States.S16.setVisible(true);
            }
         });
-        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        JButton button1 = this.buttonBuilder.build();
+        this.buttonBuilder.reset();
+        this.buttonBuilder.buildTip("Inventario");
+        this.buttonBuilder.buildDimension(0, 365, 34, 36);
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        JButton inventory = this.buttonBuilder.build();
+        inventory.setIcon(new ImageIcon("src/model/assets/chest.png"));
+        inventory.addMouseListener(new InventoryMouseListener());
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), button1, inventory);
         return this.panelBuilder.build();
     }
 
