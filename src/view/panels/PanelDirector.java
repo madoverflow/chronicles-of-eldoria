@@ -41,12 +41,12 @@ public class PanelDirector {
     public JPanel makePanelMenu(){
         JLabel title = new JLabel("CHRONICLES OF ELDORIA");
         title.setForeground(Color.BLACK);
-        title.setFont(new Font("Times New Roman", Font.PLAIN, 45));
-        title.setBounds(0, -59, 580, 150);
+        title.setFont(new Font("Times New Roman", Font.PLAIN, 48));
+        title.setBounds(100, 15, 600, 100);
         this.panelBuilder.reset();
         this.buttonBuilder.reset();
         this.buttonBuilder.buildText("START");
-        this.buttonBuilder.buildDimension(190, 330, 175, 75);
+        this.buttonBuilder.buildDimension(315, 445, 175, 75);
         this.buttonBuilder.buildForegroundColor(Color.BLACK);
         this.buttonBuilder.builFont(new Font("Times New Roman", Font.PLAIN, 30));
         this.buttonBuilder.buildListener(event -> {
@@ -249,11 +249,11 @@ public class PanelDirector {
         //scroll
         this.scrollBuilder.reset();
         this.scrollBuilder.buildDimension(87, 25, 375, 275);
-        this.scrollBuilder.buildText("Se avanti vuoi andare, il bivio devi oltrepassare.\n\n\n" +
+        this.scrollBuilder.buildText("Se avanti vuoi andare, il bivio devi oltrepassare.\n\n" +
                 "Due sentieri s'aprono al tuo cammino,\n" +
                 "Uno più difficile, un destino divino.\n" +
                 "La luce risplende in uno, ma attento...\n" +
-                "Nel buio nasce spesso l'avvento.\n\n\n" +
+                "Nel buio nasce spesso l'avvento.\n\n" +
                 "Quale sentiero scegli?");
 
         this.buttonBuilder.reset();
@@ -636,7 +636,7 @@ public class PanelDirector {
         this.buttonBuilder.reset();
         this.scrollBuilder.buildDimension(0, 25, 300, 275);
         this.scrollBuilder.buildText("L’interno delle cripte risulta poco luminoso.\nAvventurarti con questa scarsa luminosità risulta impossibile."+
-                "Caso vuole che attorno a te ci sono delle fiaccole."+
+                "\nCaso vuole che attorno a te ci sono delle fiaccole."+
                 "\nVedendole, capisci che sarà necessario prenderne una per continuare il viaggio.");
         labelBackgroundImage.setBounds(315, 25, 235, 275);
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
@@ -979,9 +979,9 @@ public class PanelDirector {
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
         this.buttonBuilder.reset();
-        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildDimension(87, 25, 375, 250);
         this.scrollBuilder.buildText("Hai afferrato la pietra, ma la magia non scorre dentro di te. Sauron si scaglia" +
-                " contro di te e privato di magia, non hai alcuna difesa. Di conseguenza, sei morto.");
+                " contro di te e privato di magia, non hai alcuna difesa.\nDi conseguenza, sei morto.");
         this.buttonBuilder.buildDimension(215, 335, 125, 30);
         this.buttonBuilder.buildText("Finisci il gioco");
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
@@ -1008,7 +1008,7 @@ public class PanelDirector {
                 "il tuo corpo e la tua anima. Pertanto, richiederà il tuo sacrificio.\n\nAd un tratto, da lontano vedi " +
                 "arrivare Lythien, l’elfo che hai salvato nel bosco.\n\nLythien: \"Non potevo perdermi questo storico " +
                 "momento. Come ti ho detto: gli elfi sono riconoscenti e ti devo un favore. Distrarrò Sauron, vai a " +
-                "posizionare la pietra in cima alla statua cosicché da porre fine a tutto.  PER ELVERIOOOOOOOON!\"" +
+                "posizionare la pietra in cima alla statua cosicché da porre fine a tutto.\nPER ELVERIOOOOOOOON!\"" +
                 "\n\n...\n\nGrazie a Lythien, arrivi in cima e posizioni la pietra. La magia viene sprigionata dalla " +
                 "statua e sia Eldoria che i regni circoscritti tornano a splendere di luce celeste abbattendo e ponendo " +
                 "fine all’Ordine delle Ombre, Sauron scompare insieme ad esso.");

@@ -17,6 +17,7 @@ public class Main {
         States.STATE_MENU.setVisible(true);
         //States.STATE_INCIPIT.setVisible(true);
         //States.S1.setVisible(true);
+        //States.S2.setVisible(true);
         //States.S5.setVisible(true);
         //States.S6.setVisible(true);
         //States.S7.setVisible(true);

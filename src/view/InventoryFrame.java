@@ -1,9 +1,12 @@
 package view;
+import controller.InventoryMouseListener;
 import model.inventory.Inventory;
 import model.items.Item;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.nio.file.FileSystems;
 
 public class InventoryFrame extends JFrame {
@@ -63,6 +66,12 @@ public class InventoryFrame extends JFrame {
         inventory.setLocation(0,0);
         inventory.setResizable(false);
         inventory.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        inventory.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                InventoryMouseListener.isClosed = true;
+            }
+        });
         inventory.setVisible(true);
         return inventory;
     }
