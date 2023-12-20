@@ -17,10 +17,7 @@ import view.scroll.ScrollBuilder;
 import view.states.States;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.nio.file.FileSystems;
 import java.util.List;
 
@@ -52,8 +49,8 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(Color.BLACK);
         this.buttonBuilder.builFont(new Font("Times New Roman", Font.PLAIN, 30));
         this.buttonBuilder.buildListener(event -> {
-            States.sMenu.setVisible(false);
-            States.sIncipit.setVisible(true);
+            States.STATE_MENU.setVisible(false);
+            States.STATE_INCIPIT.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.buttonBuilder.build(),title);
         return this.panelBuilder.build();
@@ -95,7 +92,7 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
-            States.sIncipit.setVisible(false);
+            States.STATE_INCIPIT.setVisible(false);
             States.S0.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
@@ -452,7 +449,7 @@ public class PanelDirector {
             PanelDirector.CRYPT.setStrategy(ConcretePalindromic.getInstance());
             States.stateCrypt();
             States.S9.setVisible(false);
-            States.sCrypt.setVisible(true);
+            States.stateCrypt.setVisible(true);
         });
         this.buttonBuilder.buildTip("Contare le parole palindrome escluse sotto parole");
         palindromicButton = this.buttonBuilder.build();
@@ -466,7 +463,7 @@ public class PanelDirector {
             PanelDirector.CRYPT.setStrategy(ConcreteHistory.getInstance());
             States.stateCrypt();
             States.S9.setVisible(false);
-            States.sCrypt.setVisible(true);
+            States.stateCrypt.setVisible(true);
         });
         historyButton = this.buttonBuilder.build();
         this.buttonBuilder.reset();
@@ -479,7 +476,7 @@ public class PanelDirector {
             PanelDirector.CRYPT.setStrategy(ConcretePrimes.getInstance());
             States.stateCrypt();
             States.S9.setVisible(false);
-            States.sCrypt.setVisible(true);
+            States.stateCrypt.setVisible(true);
         });
         this.buttonBuilder.buildTip("Scrivere i numeri separati da uno spazio bianco");
         primesButton = this.buttonBuilder.build();
@@ -501,7 +498,7 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             if (PanelDirector.CRYPT.open(textField.getText())) {
-                States.sCrypt.setVisible(false);
+                States.stateCrypt.setVisible(false);
                 States.S10.setVisible(true);
             } else
                 JOptionPane.showMessageDialog(null, "Hai sbagliato la risposta.\nRitenta o cambia" +
@@ -514,7 +511,7 @@ public class PanelDirector {
         this.buttonBuilder.buildBackgroundColor(Color.WHITE);
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
-            States.sCrypt.setVisible(false);
+            States.stateCrypt.setVisible(false);
             States.S9.setVisible(true);
         });
         backButton = this.buttonBuilder.build();
@@ -656,7 +653,7 @@ public class PanelDirector {
         this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
         this.buttonBuilder.buildListener(event -> {
             States.S13.setVisible(false);
-            States.sTiles.setVisible(true);
+            States.STATE_TILES.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(),this.buttonBuilder.build());
         return this.panelBuilder.build();
@@ -754,7 +751,7 @@ public class PanelDirector {
         buttonExit.addActionListener(event ->{
             JOptionPane.showMessageDialog(null,"Complimenti, hai superato la prova!" +
                     "\nAdesso puoi uscire dalla cripta!");
-            States.sTiles.setVisible(false);
+            States.STATE_TILES.setVisible(false);
             States.S14.setVisible(true);
         });
         buttonInfo.addActionListener(event -> {
@@ -822,6 +819,29 @@ public class PanelDirector {
         return this.panelBuilder.build();
     }
 
+    public JPanel makePanelS16(){
+        this.panelBuilder.reset();
+        this.scrollBuilder.reset();
+        this.buttonBuilder.reset();
+        this.scrollBuilder.buildDimension(87, 25, 375, 275);
+        this.scrollBuilder.buildText("Hai afferrato la pietra, ma la magia non scorre dentro di te. Sauron si scaglia" +
+                " contro di te e privato di magia, non hai alcuna difesa. Di conseguenza, sei morto.");
+        this.buttonBuilder.buildDimension(215, 335, 125, 30);
+        this.buttonBuilder.buildText("Finisci il gioco");
+        this.buttonBuilder.buildBackgroundColor(Color.WHITE);
+        this.buttonBuilder.buildForegroundColor(new Color(0.58f,0.29f,0f));
+        this.buttonBuilder.buildListener(event -> {
+            JOptionPane.showMessageDialog(null,"Tips:  la pietra dell’aurora può essere " +
+                    "brandita solo da un animo puro.\n\n" +
+                    "Consiglio per il futuro:  prova ad aiutare le persone in difficoltà.\n\n" +
+                    "Clicca OK per iniziare una nuova partita!");
+            States.S16.setVisible(false);
+            States.STATE_MENU.setVisible(true);
+        });
+        this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
+        return this.panelBuilder.build();
+    }
+
     public JPanel makePanelS17() { //Sistemare ascoltatore Menu
         this.panelBuilder.reset();
         this.scrollBuilder.reset();
@@ -844,7 +864,7 @@ public class PanelDirector {
             JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
                     "sconfiggendo Sauron!");
             States.S17.setVisible(false);
-            States.sMenu.setVisible(true);
+            States.STATE_MENU.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
@@ -871,7 +891,7 @@ public class PanelDirector {
                     "da individui loschi... \nla via più semplice non sempre è quella giusta.\n\n" +
                     "Clicca OK per iniziare una nuova partita!");
             States.S18.setVisible(false);
-            States.sMenu.setVisible(true);
+            States.STATE_MENU.setVisible(true);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
