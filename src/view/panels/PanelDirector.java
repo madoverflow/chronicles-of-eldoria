@@ -731,9 +731,9 @@ public class PanelDirector {
         this.scrollBuilder.buildDimension(0, 0, 550, 200);
         this.scrollBuilder.buildText("Tre indovinelli, uno per ciascuna chiave. Inserisci le risposte nel pannello " +
                 "corrispondente." + "\n\n" +
-                "1. Quante 'a' ci sono in questa frase?" + "\n\n" +
-                "2. Sono il mese dell'anno piu' corto, ma alle volte mi allungo un po'. Chi sono?" + "\n\n" +
-                "3. \"Il TREno dei desideri, nei miei pensieri all'incontrario va!\" Seleziona il numero nascosto " +
+                "1. \"Quante 'a' ci sono in questa frase?\"" + "\n\n" +
+                "2. \"Sono il mese dell'anno piu' corto, ma alle volte mi allungo un po'. Chi sono?\"" + "\n\n" +
+                "3. \"Il treno dei desideri, nei miei pensieri all'incontrario va!\" Seleziona il numero nascosto " +
                 "presente all'interno di questa frase.");
         this.buttonBuilder.buildDimension(203, 335, 150, 30);
         this.buttonBuilder.buildText("Sblocca");
@@ -989,10 +989,9 @@ public class PanelDirector {
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Tips:  la pietra dell’aurora può essere " +
                     "brandita solo da un animo puro.\n\n" +
-                    "Consiglio per il futuro:  prova ad aiutare le persone in difficoltà.\n\n" +
-                    "Clicca OK per iniziare una nuova partita!");
-            States.S16.setVisible(false);
-            States.STATE_MENU.setVisible(true);
+                    "Consiglio per il futuro:  prova ad aiutare le persone in difficoltà.\n");
+            States.S16.dispose();
+            System.exit(0);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
@@ -1019,8 +1018,8 @@ public class PanelDirector {
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
                     "sconfiggendo Sauron!\n\nConsiglio: rigioca l'avventura prendendo scelte diverse per scoprire gli altri finali!");
-            States.S17.setVisible(false);
-            States.STATE_MENU.setVisible(true);
+            States.S17.dispose();
+            System.exit(0);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
@@ -1044,10 +1043,9 @@ public class PanelDirector {
         this.buttonBuilder.buildListener(event -> {
             JOptionPane.showMessageDialog(null,"Tips:  Non dovresti fidarti di certi individui.\n\n" +
                     "Consiglio per il futuro:  Cerca di risolvere gli enigmi con le tue conoscenze senza farti aiutare " +
-                    "da individui loschi... \nla via più semplice non sempre è quella giusta.\n\n" +
-                    "Clicca OK per iniziare una nuova partita!");
-            States.S18.setVisible(false);
-            States.STATE_MENU.setVisible(true);
+                    "da individui loschi... \nla via più semplice non sempre è quella giusta.\n");
+            States.S18.dispose();
+            System.exit(0);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
@@ -1089,8 +1087,8 @@ public class PanelDirector {
             JOptionPane.showMessageDialog(null,"Complimenti hai finito il gioco salvando Eldoria e " +
                     "sconfiggendo Sauron!\n\nPurtroppo però Lythien è stata uccisa a causa di una tua scelta sbagliata." +
                     "\n\nConsiglio: rigioca l'avventura prendendo scelte diverse per scoprire gli altri finali!");
-            States.S19.setVisible(false);
-            States.STATE_MENU.setVisible(true);
+            States.S19.dispose();
+            System.exit(0);
         });
         this.panelBuilder.buildComponents(this.scrollBuilder.build(), this.buttonBuilder.build());
         return this.panelBuilder.build();
